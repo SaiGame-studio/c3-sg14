@@ -6,7 +6,7 @@ public class ShipMovement : MonoBehaviour
 {
 
     [SerializeField] protected Vector3 targetPosition;
-    [SerializeField] protected float speed = 0.1f;
+    [SerializeField] protected float speed = 0.01f;
 
     void FixedUpdate()
     {
@@ -26,7 +26,7 @@ public class ShipMovement : MonoBehaviour
         Vector3 diff = this.targetPosition - transform.parent.position;
         diff.Normalize();
         float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
-        transform.parent.rotation = Quaternion.Euler(0f, 0f, rot_z + 90);
+        transform.parent.rotation = Quaternion.Euler(0f, 0f, rot_z);
     }
 
     protected virtual void Moving()

@@ -12,11 +12,14 @@ public class ShipShooting : MonoBehaviour
         this.Shooting();
     }
 
+
     protected virtual void Shooting()
     {
         if (!this.isShooting) return;
 
-        Instantiate(this.bulletPrefab);
+        Vector3 spawnPos = transform.position;
+        Quaternion rotation = transform.parent.rotation;
+        Instantiate(this.bulletPrefab, spawnPos, rotation);
         Debug.Log("Shooting");
     }
 }
