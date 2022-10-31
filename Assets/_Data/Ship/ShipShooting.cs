@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShipShooting : MonoBehaviour
 {
     [SerializeField] protected bool isShooting = false;
-    [SerializeField] protected float shootDelay = 1f;
+    [SerializeField] protected float shootDelay = 0.2f;
     [SerializeField] protected float shootTimer = 0f;
     [SerializeField] protected Transform bulletPrefab;
 
@@ -21,15 +21,16 @@ public class ShipShooting : MonoBehaviour
 
     protected virtual void Shooting()
     {
-        if (!this.isShooting) return;
-
         this.shootTimer += Time.fixedDeltaTime;
+
+        if (!this.isShooting) return;
         if (this.shootTimer < this.shootDelay) return;
         this.shootTimer = 0;
 
         Vector3 spawnPos = transform.position;
         Quaternion rotation = transform.parent.rotation;
-        Instantiate(this.bulletPrefab, spawnPos, rotation);
+        Transform newBullet = Instantiate(this.bulletPrefab, spawnPos, rotation);
+        newBullet.gameObject.SetActive(true);
         Debug.Log("Shooting");
     }
 
