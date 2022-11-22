@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class JunkRandom : SaiMonoBehaviour
 {
-    [SerializeField] protected JunkCtrl junkCtrl;
+    [SerializeField] protected JunkSpawnerCtrl junkCtrl;
 
     protected override void LoadComponents()
     {
@@ -15,7 +15,7 @@ public class JunkRandom : SaiMonoBehaviour
     protected virtual void LoadJunkCtrl()
     {
         if (this.junkCtrl != null) return;
-        this.junkCtrl = GetComponent<JunkCtrl>();
+        this.junkCtrl = GetComponent<JunkSpawnerCtrl>();
         Debug.Log(transform.name + ": LoadJunkCtrl", gameObject);
     }
 
