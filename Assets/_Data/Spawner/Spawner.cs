@@ -64,6 +64,8 @@ public abstract class Spawner : SaiMonoBehaviour
     {
         foreach(Transform poolObj in this.poolObjs)
         {
+            if (poolObj == null) continue;
+
             if (poolObj.name == prefab.name)  {
                 this.poolObjs.Remove(poolObj);
                 return poolObj;
