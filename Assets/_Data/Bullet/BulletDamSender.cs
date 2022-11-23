@@ -1,10 +1,10 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class BulletAbstract : SaiMonoBehaviour
+public class BulletDamSender : DamageSender
 {
-    [Header("Bullet Abtract")]
     [SerializeField] protected BulletCtrl bulletCtrl;
-    public BulletCtrl BulletCtrl { get => bulletCtrl; }
 
     protected override void LoadComponents()
     {
@@ -17,5 +17,16 @@ public abstract class BulletAbstract : SaiMonoBehaviour
         if (this.bulletCtrl != null) return;
         this.bulletCtrl = transform.parent.GetComponent<BulletCtrl>();
         Debug.Log(transform.name + ": LoadBulletCtrl", gameObject);
+    }
+
+    public override void Send(DamageReceiver damageReceiver)
+    {
+        base.Send(damageReceiver);
+        this.DestroyBullet();
+    }
+
+    protected virtual void DestroyBullet()
+    {
+        this.bulletCtrl.BulletDespawn.DespawnObject();
     }
 }

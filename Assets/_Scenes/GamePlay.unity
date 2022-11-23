@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8badb09b3dc4a3b43ab270c4b4d884d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  junkCtrl: {fileID: 141459885}
+  junkSpawnerCtrl: {fileID: 0}
 --- !u!114 &141459885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,6 +282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 203141447}
+  junkDespawn: {fileID: 791460152}
 --- !u!1 &203141446
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,10 +452,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 248935683}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67d2530320414ab4e89b5636ca2b2ba6, type: 3}
+  m_Script: {fileID: 11500000, guid: 02d24623f831b9c4fb8120693a1353f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  bulletCtrl: {fileID: 2055627466}
 --- !u!1 &279489352
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,8 +511,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 395951814}
-  - component: {fileID: 395951815}
   - component: {fileID: 395951816}
+  - component: {fileID: 395951815}
   m_Layer: 0
   m_Name: DamageReceiver
   m_TagString: Untagged
@@ -541,11 +543,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 395951813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6793ada8bed11054e81a98d0cd9a2756, type: 3}
+  m_Script: {fileID: 11500000, guid: 35ab77e7e4cde564094ef87055d8c20e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sphereCollider: {fileID: 395951816}
   hp: 1
-  hpMax: 10
+  hpMax: 2
+  isDead: 0
+  junkCtrl: {fileID: 144657176}
 --- !u!135 &395951816
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1557,6 +1562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageSender: {fileID: 248935685}
+  bulletDespawn: {fileID: 2079721928}
 --- !u!1 &2055780910
 GameObject:
   m_ObjectHideFlags: 0
