@@ -319,6 +319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model: {fileID: 203141447}
   junkDespawn: {fileID: 791460152}
+  junkSO: {fileID: 11400000, guid: 89d7aba2acc99bf45b41de063d83b89b, type: 2}
 --- !u!1 &203141446
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,7 +614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphereCollider: {fileID: 395951816}
-  hp: 1
+  hp: 2
   hpMax: 2
   isDead: 0
   junkCtrl: {fileID: 144657176}
@@ -953,7 +954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35b62ccd5ef584e4c9d2490f7e38c8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  junkCtrl: {fileID: 144657176}
+  junkCtrl: {fileID: 0}
   speed: 9
 --- !u!1 &791460150
 GameObject:
@@ -1395,7 +1396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35b62ccd5ef584e4c9d2490f7e38c8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  junkCtrl: {fileID: 1855181815}
+  junkCtrl: {fileID: 0}
   speed: 9
 --- !u!1 &1281386089
 GameObject:
@@ -1547,7 +1548,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphereCollider: {fileID: 1441516228}
-  hp: 1
+  hp: 4
   hpMax: 4
   isDead: 0
   junkCtrl: {fileID: 1855181815}
@@ -1881,6 +1882,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model: {fileID: 819929429}
   junkDespawn: {fileID: 653142400}
+  junkSO: {fileID: 11400000, guid: 2a35e81bc6cd2dd4581bc84d61123e93, type: 2}
 --- !u!1 &1873670485
 GameObject:
   m_ObjectHideFlags: 0

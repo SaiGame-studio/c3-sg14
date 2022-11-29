@@ -16,6 +16,12 @@ public class DamageReceiver : SaiMonoBehaviour
         this.Reborn();
     }
 
+    protected override void ResetValue()
+    {
+        base.ResetValue();
+        this.Reborn();
+    }
+
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -28,9 +34,8 @@ public class DamageReceiver : SaiMonoBehaviour
         this.sphereCollider = GetComponent<SphereCollider>();
         this.sphereCollider.isTrigger = true;
         this.sphereCollider.radius = 0.2f;
-        Debug.Log(transform.name + ": LoadCollider", gameObject);
+        Debug.LogWarning(transform.name + ": LoadCollider", gameObject);
     }
-
     public virtual void Reborn()
     {
         this.hp = this.hpMax;
