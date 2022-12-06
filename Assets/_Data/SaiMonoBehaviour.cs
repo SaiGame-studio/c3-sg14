@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SaiMonoBehaviour : MonoBehaviour
+public abstract class SaiMonoBehaviour : MonoBehaviour
 {
     protected virtual void Awake()
     {
