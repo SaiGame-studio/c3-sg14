@@ -51,6 +51,9 @@ public class BulletImpart : BulletAbstract
         Transform fxImpact = FXSpawner.Instance.Spawn(fxName, hitPos, hitRot);
         fxImpact.gameObject.SetActive(true);
 
+        //fxImpact.parent = other.transform.parent;
+        //Debug.LogError("stop");
+
         //Trung Nghia Nguyen
         //Vector3 dir = Vector3.Normalize(hitPos);
         //float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
