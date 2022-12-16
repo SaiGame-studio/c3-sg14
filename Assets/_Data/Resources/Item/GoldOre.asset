@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bdf393895f8c95419560b1a1a87ebcd, type: 3}
-  m_Name: Iron 3
+  m_Name: GoldOre
   m_EditorClassIdentifier: 
-  itemCode: iron
-  itemName: Iron3
+  itemCode: 2
+  itemName: Gold Ore
