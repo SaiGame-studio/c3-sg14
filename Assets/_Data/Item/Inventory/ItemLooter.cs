@@ -30,6 +30,7 @@ public class ItemLooter : SaiMonoBehaviour
         if (this._collider != null) return;
         this._collider = transform.GetComponent<SphereCollider>();
         this._collider.isTrigger = true;
+        this._collider.radius = 0.3f;
         Debug.LogWarning(transform.name + " LoadTrigger", gameObject);
     }
 
@@ -44,7 +45,12 @@ public class ItemLooter : SaiMonoBehaviour
 
     protected virtual void OnTriggerEnter(Collider collider)
     {
+
+        ItemPickupable itemPickupable = collider.GetComponent<ItemPickupable>();
+        if (itemPickupable == null) return;
+
         Debug.Log(collider.name);
         Debug.Log(collider.transform.parent.name);
+        Debug.Log("Co the pick");
     }
 }

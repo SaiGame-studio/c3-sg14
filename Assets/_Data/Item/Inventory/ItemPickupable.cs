@@ -18,7 +18,7 @@ public class ItemPickupable : SaiMonoBehaviour
         if (this._collider != null) return;
         this._collider = transform.GetComponent<SphereCollider>();
         this._collider.isTrigger = true;
-        this._collider.radius = 0.2f;
+        this._collider.radius = 0.1f;
         Debug.LogWarning(transform.name + " LoadTrigger", gameObject);
     }
 }
