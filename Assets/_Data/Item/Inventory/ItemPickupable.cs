@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,21 @@ public class ItemPickupable : JunkAbstract
 
     public static ItemCode String2ItemCode(string itemName)
     {
-        return (ItemCode)System.Enum.Parse(typeof(ItemCode), itemName);
+        try
+        {
+            return (ItemCode)System.Enum.Parse(typeof(ItemCode), itemName);
+        }
+        catch (ArgumentException e)
+        {
+            Debug.LogError(e.ToString());
+            return ItemCode.NoItem;
+        }
+    }
+
+    public virtual void OnMouseDown()
+    {
+        //Debug.Log(transform.parent.name);
+        PlayerCtrl.Instance.PlayerPickup.ItemPickup(this);
     }
 
     protected override void LoadComponents()
@@ -24,7 +39,7 @@ public class ItemPickupable : JunkAbstract
         if (this._collider != null) return;
         this._collider = transform.GetComponent<SphereCollider>();
         this._collider.isTrigger = true;
-        this._collider.radius = 0.1f;
+        this._collider.radius = 0.5f;
         Debug.LogWarning(transform.name + " LoadTrigger", gameObject);
     }
 
