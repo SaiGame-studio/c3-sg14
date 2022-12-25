@@ -7,12 +7,6 @@ public class Inventory : SaiMonoBehaviour
     [SerializeField] protected int maxSlot = 70;
     [SerializeField] protected List<ItemInventory> items;
 
-    protected override void Start()
-    {
-        base.Start();
-        //this.AddItem(ItemCode.IronOre, 4);
-    }
-
     public virtual bool AddItem(ItemCode itemCode, int addCount)
     {
         ItemInventory itemInventory = this.GetItemByCode(itemCode);
@@ -21,6 +15,24 @@ public class Inventory : SaiMonoBehaviour
         if (newCount > itemInventory.maxStack) return false;
 
         itemInventory.itemCount = newCount;
+        return true;
+    }
+
+    public virtual bool DeductItem(ItemCode itemCode, int addCount)
+    {
+        ItemInventory itemInventory = this.GetItemByCode(itemCode);
+        int newCount = itemInventory.itemCount - addCount;
+        if (newCount < 0) return false;
+
+        itemInventory.itemCount = newCount;
+        return true;
+    }
+
+    public virtual bool TryDeductItem(ItemCode itemCode, int addCount)
+    {
+        ItemInventory itemInventory = this.GetItemByCode(itemCode);
+        int newCount = itemInventory.itemCount - addCount;
+        if (newCount < 0) return false;
         return true;
     }
 
@@ -45,9 +57,6 @@ public class Inventory : SaiMonoBehaviour
             this.items.Add(itemInventory);
             return itemInventory;
         }
-
         return null;
     }
-
-
 }
