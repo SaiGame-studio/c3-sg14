@@ -4,32 +4,33 @@ using UnityEngine;
 public class Inventory : SaiMonoBehaviour
 {
     [SerializeField] protected int maxSlot = 70;
-    [SerializeField] protected int maxAddCount = 999;
     [SerializeField] protected List<ItemInventory> items;
 
     protected override void Start()
     {
         base.Start();
-        this.AddItem(ItemCode.IronOre, 10);
+        this.AddItem(ItemCode.IronOre, 21);
         this.AddItem(ItemCode.CopperSword, 3);
     }
 
     public virtual bool AddItem(ItemCode itemCode, int addCount)
     {
-        if (addCount > this.maxAddCount) Debug.LogError("Cant add too many item, max: " + this.maxAddCount);
 
         ItemProfileSO itemProfile = this.GetItemProfile(itemCode);
 
         int addRemain = addCount;
         int newCount;
         int itemMaxStack;
+        int addMore;
         ItemInventory itemExist;
-        for (int i = 0; i < this.maxAddCount; i++)
+        for (int i = 0; i < this.maxSlot; i++)
         {
             itemExist = this.GetItemNotFullStack(itemCode);
             if (itemExist == null)
             {
-                itemExist = this.CreateDummyItem(itemProfile);
+                if (this.IsInventoryFull()) return false;
+
+                itemExist = this.CreateEmptyItem(itemProfile);
                 this.items.Add(itemExist);
             }
 
@@ -38,16 +39,28 @@ public class Inventory : SaiMonoBehaviour
             itemMaxStack = this.GetMaxStack(itemExist);
             if (newCount > itemMaxStack)
             {
-                newCount = itemMaxStack;
+                addMore = itemMaxStack - itemExist.itemCount;
+                newCount = itemExist.itemCount + addMore;
+                addRemain -= addMore;
+            }
+            else
+            {
+                addRemain -= newCount;
             }
 
             itemExist.itemCount = newCount;
-            addRemain -= newCount;
             if (addRemain < 1) break;
         }
 
         return true;
     }
+
+    protected virtual bool IsInventoryFull()
+    {
+        if (this.items.Count >= this.maxSlot) return true;
+        return false;
+    }
+
 
     protected virtual int GetMaxStack(ItemInventory itemInventory)
     {
@@ -69,10 +82,14 @@ public class Inventory : SaiMonoBehaviour
 
     protected virtual ItemInventory GetItemNotFullStack(ItemCode itemCode)
     {
-        ItemInventory itemInventory = this.items.Find((item) => item.itemProfile.itemCode == itemCode);
-        if (this.IsFullStack(itemInventory)) return null;
+        foreach(ItemInventory itemInventory in this.items)
+        {
+            if (itemCode != itemInventory.itemProfile.itemCode) continue;
+            if (this.IsFullStack(itemInventory)) continue;
+            return itemInventory;
+        }
 
-        return itemInventory;
+        return null;
     }
 
     protected virtual bool IsFullStack(ItemInventory itemInventory)
@@ -83,7 +100,7 @@ public class Inventory : SaiMonoBehaviour
         return itemInventory.itemCount >= maxStack;
     }
 
-    protected virtual ItemInventory CreateDummyItem(ItemProfileSO itemProfile)
+    protected virtual ItemInventory CreateEmptyItem(ItemProfileSO itemProfile)
     {
         ItemInventory itemInventory = new ItemInventory
         {
@@ -105,7 +122,7 @@ public class Inventory : SaiMonoBehaviour
 
 
 
-
+    /*
     protected virtual bool AddResource(ItemInventory itemInventory, int addCount)
     {
         Debug.Log("AddResource");
@@ -166,5 +183,5 @@ public class Inventory : SaiMonoBehaviour
         return null;
     }
 
-
+    */
 }
