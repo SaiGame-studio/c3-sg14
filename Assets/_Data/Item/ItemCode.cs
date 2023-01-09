@@ -11,7 +11,7 @@ public enum ItemCode
     CopperSword = 1000,
 }
 
-public class ItemCodeParse{
+public class ItemCodeParser{
     public static ItemCode FromString(string itemName)
     {
         try
