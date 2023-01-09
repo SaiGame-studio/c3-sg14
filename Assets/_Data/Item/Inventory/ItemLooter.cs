@@ -40,15 +40,10 @@ public class ItemLooter : InventoryAbstract
         ItemPickupable itemPickupable = collider.GetComponent<ItemPickupable>();
         if (itemPickupable == null) return;
 
-        ItemCode itemCode = itemPickupable.GetItemCode();
-        if (this.inventory.AddItem(itemCode, 1))
+        ItemInventory itemInventory = itemPickupable.ItemCtrl.ItemInventory;
+        if (this.inventory.AddItem(itemInventory))
         {
             itemPickupable.Picked();
         }
-
-        //Debug.Log("Pickup "+ itemCode.ToString());
     }
-
-
-
 }
