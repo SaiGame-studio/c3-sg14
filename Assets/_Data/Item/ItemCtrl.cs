@@ -30,7 +30,7 @@ public class ItemCtrl : SaiMonoBehaviour
     protected virtual void LoadItemInventory()
     {
         if (this.itemInventory.itemProfile != null) return;
-        ItemCode itemCode = ItemCodeParse.FromString(transform.name);
+        ItemCode itemCode = ItemCodeParser.FromString(transform.name);
         ItemProfileSO itemProfile = ItemProfileSO.FindByItemCode(itemCode);
         this.itemInventory.itemProfile = itemProfile;
         this.itemInventory.itemCount = 1;
