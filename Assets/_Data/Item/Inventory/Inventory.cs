@@ -12,8 +12,8 @@ public class Inventory : SaiMonoBehaviour
     {
         base.Start();
         this.AddItem(ItemCode.CopperSword, 1);
-        this.AddItem(ItemCode.GoldOre, 3);
-        this.AddItem(ItemCode.IronOre, 34);
+        this.AddItem(ItemCode.GoldOre, 10);
+        this.AddItem(ItemCode.IronOre, 10);
     }
 
     public virtual bool AddItem(ItemCode itemCode, int addCount)
@@ -135,7 +135,7 @@ public class Inventory : SaiMonoBehaviour
     {
         ItemInventory itemInventory;
         int deduct;
-        for (int i = this.items.Count-1; i >= 0; i--)
+        for (int i = this.items.Count - 1; i >= 0; i--)
         {
             if (deductCount <= 0) break;
 
@@ -155,79 +155,17 @@ public class Inventory : SaiMonoBehaviour
 
             itemInventory.itemCount -= deduct;
         }
+
+        this.ClearEmptySlot();
     }
 
-
-
-
-
-
-
-
-
-
-
-
-    /*
-    protected virtual bool AddResource(ItemInventory itemInventory, int addCount)
+    protected virtual void ClearEmptySlot()
     {
-        Debug.Log("AddResource");
-
-        int newCount = itemInventory.itemCount + addCount;
-        if (newCount > itemInventory.maxStack) return false;
-
-        itemInventory.itemCount = newCount;
-        return true;
-    }
-
-    public virtual bool AddEquiment(ItemInventory itemInventory)
-    {
-        Debug.Log("AddEquiment");
-        itemInventory.itemCount = 1;
-        return true;
-    }
-
-    public virtual bool DeductItem(ItemCode itemCode, int addCount)
-    {
-        ItemInventory itemInventory = this.GetItemByCode(itemCode);
-        int newCount = itemInventory.itemCount - addCount;
-        if (newCount < 0) return false;
-
-        itemInventory.itemCount = newCount;
-        return true;
-    }
-
-    public virtual bool TryDeductItem(ItemCode itemCode, int addCount)
-    {
-        ItemInventory itemInventory = this.GetItemByCode(itemCode);
-        int newCount = itemInventory.itemCount - addCount;
-        if (newCount < 0) return false;
-        return true;
-    }
-
-    public virtual ItemInventory GetItemByCode(ItemCode itemCode)
-    {
-        ItemInventory itemInventory = this.items.Find((item) => item.itemProfile.itemCode == itemCode);
-        if (itemInventory == null) itemInventory = this.AddEmptyProfile(itemCode);
-        return itemInventory;
-    }
-
-    protected virtual ItemInventory AddEmptyProfile(ItemCode itemCode)
-    {
-        var profiles = Resources.LoadAll("Item", typeof(ItemProfileSO));
-        foreach (ItemProfileSO profile in profiles)
+        ItemInventory itemInventory;
+        for (int i = 0; i < this.items.Count; i++)
         {
-            if (profile.itemCode != itemCode) continue;
-            ItemInventory itemInventory = new ItemInventory
-            {
-                itemProfile = profile,
-                maxStack = profile.defaultMaxStack
-            };
-            this.items.Add(itemInventory);
-            return itemInventory;
+            itemInventory = this.items[i];
+            if (itemInventory.itemCount == 0) this.items.RemoveAt(i);
         }
-        return null;
     }
-
-    */
 }

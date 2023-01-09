@@ -9,7 +9,9 @@ public class ItemUpgrade : InventoryAbstract
     protected override void Start()
     {
         base.Start();
+        Invoke(nameof(this.Test), 1);
         Invoke(nameof(this.Test), 2);
+        Invoke(nameof(this.Test), 3);
     }
 
     protected virtual void Test()
@@ -45,7 +47,7 @@ public class ItemUpgrade : InventoryAbstract
         ItemCode itemCode;
         int itemCount;
 
-        if (currentLevel > upgradeLevels.Count)
+        if (currentLevel >= upgradeLevels.Count)
         {
             Debug.LogError("Item cant upgrade anymore, current: "+ currentLevel);
             return false;
