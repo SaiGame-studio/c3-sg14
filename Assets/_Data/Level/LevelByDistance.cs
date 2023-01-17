@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelByDistance : Level
@@ -7,9 +5,9 @@ public class LevelByDistance : Level
     [Header("By Distance")]
     [SerializeField] protected Transform target;
     [SerializeField] protected float distance = 0;
-    [SerializeField] protected float distancePerLevel = 70f;
+    [SerializeField] protected float distancePerLevel = 10f;
 
-    private void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         this.Leveling();
     }
