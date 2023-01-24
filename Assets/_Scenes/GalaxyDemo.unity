@@ -448,7 +448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model: {fileID: 203141447}
   junkDespawn: {fileID: 791460152}
-  junkSO: {fileID: 11400000, guid: 89d7aba2acc99bf45b41de063d83b89b, type: 2}
+  shootableObject: {fileID: 11400000, guid: 6ee527163929110449dc50df8f6ddd3e, type: 2}
 --- !u!4 &172596037 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5489883045658992710, guid: 85626690c4ec0e04c88d4f35d747f3fa, type: 3}
@@ -2517,7 +2517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model: {fileID: 1408331842}
   junkDespawn: {fileID: 1051733373}
-  junkSO: {fileID: 11400000, guid: 13eaf96738cbb1c4db3f7a59e7db2376, type: 2}
+  shootableObject: {fileID: 11400000, guid: 819cb517fe17822418ba63e6fdcb2fab, type: 2}
 --- !u!1 &888984444
 GameObject:
   m_ObjectHideFlags: 0
@@ -3382,7 +3382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model: {fileID: 654396512}
   junkDespawn: {fileID: 367497867}
-  junkSO: {fileID: 11400000, guid: 13eaf96738cbb1c4db3f7a59e7db2376, type: 2}
+  shootableObject: {fileID: 11400000, guid: 819cb517fe17822418ba63e6fdcb2fab, type: 2}
 --- !u!1 &1403546914
 GameObject:
   m_ObjectHideFlags: 0
@@ -4617,7 +4617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model: {fileID: 819929429}
   junkDespawn: {fileID: 653142400}
-  junkSO: {fileID: 11400000, guid: 2a35e81bc6cd2dd4581bc84d61123e93, type: 2}
+  shootableObject: {fileID: 11400000, guid: 4ecd557373e731344b3aafc9fbfcdba1, type: 2}
 --- !u!1 &1873670485
 GameObject:
   m_ObjectHideFlags: 0
@@ -4835,7 +4835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model: {fileID: 1069860358}
   junkDespawn: {fileID: 1894056609}
-  junkSO: {fileID: 11400000, guid: 89d7aba2acc99bf45b41de063d83b89b, type: 2}
+  shootableObject: {fileID: 11400000, guid: 6ee527163929110449dc50df8f6ddd3e, type: 2}
 --- !u!1 &1937230396
 GameObject:
   m_ObjectHideFlags: 0
@@ -5031,7 +5031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model: {fileID: 485141679}
   junkDespawn: {fileID: 483208168}
-  junkSO: {fileID: 11400000, guid: 2a35e81bc6cd2dd4581bc84d61123e93, type: 2}
+  shootableObject: {fileID: 11400000, guid: 4ecd557373e731344b3aafc9fbfcdba1, type: 2}
 --- !u!1 &2009342816
 GameObject:
   m_ObjectHideFlags: 0
