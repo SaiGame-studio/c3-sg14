@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JunkCtrl : SaiMonoBehaviour
+public abstract class ShootableObjectCtrl : SaiMonoBehaviour
 {
     [SerializeField] protected Transform model;
-    public Transform Model { get => model; }
+    public Transform Model => model;
 
-    [SerializeField] protected JunkDespawn junkDespawn;
-    public JunkDespawn JunkDespawn { get => junkDespawn; }
+    [SerializeField] protected Despawn despawn;
+    public Despawn Despawn => despawn;
 
     [SerializeField] protected ShootableObjectSO shootableObject;
     public ShootableObjectSO ShootableObject => shootableObject;
@@ -17,8 +17,8 @@ public class JunkCtrl : SaiMonoBehaviour
     {
         base.LoadComponents();
         this.LoadModel();
-        this.LoadJunkDespawn();
-        this.LoadJunkSO();
+        this.LoadDespawn();
+        this.LoadSO();
     }
 
     protected virtual void LoadModel()
@@ -28,18 +28,20 @@ public class JunkCtrl : SaiMonoBehaviour
         Debug.LogWarning(transform.name + ": LoadModel", gameObject);
     }
 
-    protected virtual void LoadJunkDespawn()
+    protected virtual void LoadDespawn()
     {
-        if (this.junkDespawn != null) return;
-        this.junkDespawn = transform.GetComponentInChildren<JunkDespawn>();
-        Debug.LogWarning(transform.name + ": LoadJunkDespawn", gameObject);
+        if (this.despawn != null) return;
+        this.despawn = transform.GetComponentInChildren<Despawn>();
+        Debug.LogWarning(transform.name + ": LoadDespawn", gameObject);
     }
 
-    protected virtual void LoadJunkSO()
+    protected virtual void LoadSO()
     {
         if (this.shootableObject != null) return;
-        string resPath = "ShootableObject/Junk/" + transform.name;
+        string resPath = "ShootableObject/" + this.GetObjectTypeString() + "/" + transform.name;
         this.shootableObject = Resources.Load<ShootableObjectSO>(resPath);
         Debug.LogWarning(transform.name + ": LoadJunkSO " + resPath, gameObject);
     }
+
+    protected abstract string GetObjectTypeString();
 }
