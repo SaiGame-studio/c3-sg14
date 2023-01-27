@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyCtrl : ShootableObjectCtrl
+public class EnemyCtrl : AbilityObjectCtrl
 {
     protected override string GetObjectTypeString()
     {
