@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShipMovement : SaiMonoBehaviour
+public class ObjMovement : SaiMonoBehaviour
 {
 
     [SerializeField] protected Vector3 targetPosition;
