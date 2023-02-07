@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class ShootableObjectCtrl : SaiMonoBehaviour
 {
+    [Header("Shootable Object")]
     [SerializeField] protected Transform model;
     public Transform Model => model;
 
