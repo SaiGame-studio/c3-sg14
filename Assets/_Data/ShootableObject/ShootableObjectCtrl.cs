@@ -14,12 +14,16 @@ public abstract class ShootableObjectCtrl : SaiMonoBehaviour
     [SerializeField] protected ShootableObjectSO shootableObject;
     public ShootableObjectSO ShootableObject => shootableObject;
 
+    [SerializeField] protected ObjShooting objShooting;
+    public ObjShooting ObjShooting => objShooting;
+
     protected override void LoadComponents()
     {
         base.LoadComponents();
         this.LoadModel();
         this.LoadDespawn();
         this.LoadSO();
+        this.LoadObjShooting();
     }
 
     protected virtual void LoadModel()
@@ -27,6 +31,13 @@ public abstract class ShootableObjectCtrl : SaiMonoBehaviour
         if (this.model != null) return;
         this.model = transform.Find("Model");
         Debug.LogWarning(transform.name + ": LoadModel", gameObject);
+    }
+
+    protected virtual void LoadObjShooting()
+    {
+        if (this.objShooting != null) return;
+        this.objShooting = GetComponentInChildren<ObjShooting>();
+        Debug.LogWarning(transform.name + ": LoadObjShooting", gameObject);
     }
 
     protected virtual void LoadDespawn()
