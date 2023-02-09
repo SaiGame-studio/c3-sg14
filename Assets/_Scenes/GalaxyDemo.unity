@@ -788,6 +788,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &212687799
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 212687800}
+  - component: {fileID: 212687801}
+  m_Layer: 0
+  m_Name: SpawnPoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &212687800
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212687799}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.586, y: 2.61, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1380780995}
+  - {fileID: 1131620245}
+  m_Father: {fileID: 676678676}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &212687801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212687799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddd778d3c93775f4e93b98114f670459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points:
+  - {fileID: 1380780995}
+  - {fileID: 1131620245}
 --- !u!1 &218474406
 GameObject:
   m_ObjectHideFlags: 0
@@ -1960,7 +2008,7 @@ MonoBehaviour:
   model: {fileID: 5300772115673340852}
   despawn: {fileID: 120130766}
   shootableObject: {fileID: 11400000, guid: f64423d5be75dc44f83bcaf5b819c42e, type: 2}
-  objShooting: {fileID: 0}
+  objShooting: {fileID: 1705698087}
   spawnPoints: {fileID: 1382689036}
 --- !u!4 &567331561
 Transform:
@@ -2380,7 +2428,7 @@ MonoBehaviour:
   despawn: {fileID: 513088066}
   shootableObject: {fileID: 11400000, guid: 1c82ce67736237142933a2d51f077465, type: 2}
   objShooting: {fileID: 266025867}
-  spawnPoints: {fileID: 0}
+  spawnPoints: {fileID: 212687801}
 --- !u!4 &676678676
 Transform:
   m_ObjectHideFlags: 0
@@ -2398,6 +2446,7 @@ Transform:
   - {fileID: 1973741386}
   - {fileID: 266025866}
   - {fileID: 1368793481}
+  - {fileID: 212687800}
   m_Father: {fileID: 2029737498}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2520,7 +2569,7 @@ GameObject:
   - component: {fileID: 733418676}
   - component: {fileID: 733418677}
   m_Layer: 0
-  m_Name: ShipMovement
+  m_Name: ObjMovement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2554,6 +2603,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   speed: 0.001
+  rotSpeed: 0.01
   distance: 1
   minDistance: 1
   target: {fileID: 1645776044}
@@ -3403,6 +3453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   speed: 0.01
+  rotSpeed: 3
   distance: 1
   minDistance: 1
   target: {fileID: 1645776044}
@@ -3679,6 +3730,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2935311133260703311, guid: a26e73dd28ded2c4d97ea418dabc7909, type: 3}
   m_PrefabInstance: {fileID: 2935311132165455011}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1131620244
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1131620245}
+  m_Layer: 0
+  m_Name: Point_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1131620245
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131620244}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.973, y: -0.228, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 212687800}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1132503000
 GameObject:
   m_ObjectHideFlags: 0
@@ -4179,6 +4260,36 @@ MonoBehaviour:
   model: {fileID: 654396512}
   junkDespawn: {fileID: 367497867}
   shootableObject: {fileID: 11400000, guid: 819cb517fe17822418ba63e6fdcb2fab, type: 2}
+--- !u!1 &1380780994
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1380780995}
+  m_Layer: 0
+  m_Name: Point_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1380780995
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380780994}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.372, y: 0.296, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 212687800}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1382689034
 GameObject:
   m_ObjectHideFlags: 0
@@ -4272,6 +4383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   speed: 0.01
+  rotSpeed: 3
   distance: 1
   minDistance: 1
 --- !u!1 &1407955195
@@ -5345,12 +5457,12 @@ GameObject:
   - component: {fileID: 1705698086}
   - component: {fileID: 1705698087}
   m_Layer: 0
-  m_Name: ShipShooting
+  m_Name: ObjShooting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1705698086
 Transform:
   m_ObjectHideFlags: 0
@@ -5372,7 +5484,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1705698085}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb70fb057e5ad124ead96eb787e0a3f3, type: 3}
   m_Name: 
@@ -6251,6 +6363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   speed: 0.005
+  rotSpeed: 3
   distance: 1
   minDistance: 1
   target: {fileID: 1645776044}
