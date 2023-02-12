@@ -17,6 +17,16 @@ public class ObjMovement : SaiMonoBehaviour
         this.Moving();
     }
 
+    public virtual void SetSpeed(float speed)
+    {
+        this.speed = speed;
+    }
+
+    public virtual void SetRotSpeed(float speed)
+    {
+        this.rotSpeed = speed;
+    }
+
     protected virtual void LootAtTarget()
     {
         Vector3 diff = this.targetPosition - transform.parent.position;
