@@ -17,6 +17,6 @@ public class MotherShipModify : ObjModifyAbtract
     protected virtual void ShipModify()
     {
         this.shootableObjectCtrl.ObjMovement.SetSpeed(this.speed);
-        this.shootableObjectCtrl.ObjMovement.SetRotSpeed(this.rotSpeed);
+        //this.shootableObjectCtrl.ObjMovement.SetRotSpeed(this.rotSpeed);
     }
 }
