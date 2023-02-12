@@ -20,6 +20,9 @@ public abstract class ShootableObjectCtrl : SaiMonoBehaviour
     [SerializeField] protected ObjMovement objMovement;
     public ObjMovement ObjMovement => objMovement;
 
+    [SerializeField] protected ObjLookAtTarget objLookAtTarget;
+    public ObjLookAtTarget ObjLookAtTarget => objLookAtTarget;
+
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -28,6 +31,7 @@ public abstract class ShootableObjectCtrl : SaiMonoBehaviour
         this.LoadSO();
         this.LoadObjShooting();
         this.LoadObjMovement();
+        this.LoadObjLookAtTarget();
     }
 
     protected virtual void LoadModel()
@@ -49,6 +53,13 @@ public abstract class ShootableObjectCtrl : SaiMonoBehaviour
         if (this.objMovement != null) return;
         this.objMovement = GetComponentInChildren<ObjMovement>();
         Debug.LogWarning(transform.name + ": LoadObjMovement", gameObject);
+    }
+
+    protected virtual void LoadObjLookAtTarget()
+    {
+        if (this.objLookAtTarget != null) return;
+        this.objLookAtTarget = GetComponentInChildren<ObjLookAtTarget>();
+        Debug.LogWarning(transform.name + ": LoadObjLookAtTarget", gameObject);
     }
 
     protected virtual void LoadDespawn()
