@@ -5,7 +5,7 @@ using UnityEngine;
 public class MotherShipModify : ObjModifyAbtract
 {
     [Header("Mother Ship")]
-    [SerializeField] protected float speed = 0.005f;
+    [SerializeField] protected float speed = 0.001f;
     [SerializeField] protected float rotSpeed = 0.01f;
 
     protected override void Start()
