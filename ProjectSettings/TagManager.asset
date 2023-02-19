@@ -41,6 +41,12 @@ TagManager:
   - name: Background
     uniqueID: 3422912695
     locked: 0
+  - name: Station
+    uniqueID: 3108706959
+    locked: 0
+  - name: MotherShip
+    uniqueID: 3352938789
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
