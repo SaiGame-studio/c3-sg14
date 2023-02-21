@@ -2,16 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AbilitySummonEnemy: AbilitySummon
+public class AbilitySummonEnemy : AbilitySummon
 {
     [Header("Summon Enemy")]
     [SerializeField] protected List<Transform> minions;
     [SerializeField] protected int minionLimit = 2;
 
-    protected override void FixedUpdate()
+    protected override void Start()
     {
-        base.FixedUpdate();
-        this.ClearDeadMinons();
+        InvokeRepeating(nameof(this.ClearDeadMinions), 2f, 2f);
     }
 
     protected override void LoadComponents()
@@ -42,11 +41,11 @@ public class AbilitySummonEnemy: AbilitySummon
         return minion;
     }
 
-    protected virtual void ClearDeadMinons()
+    protected virtual void ClearDeadMinions()
     {
         foreach (Transform minion in this.minions)
         {
-            if(minion.gameObject.activeSelf == false)
+            if (minion.gameObject.activeSelf == false)
             {
                 this.minions.Remove(minion);
                 return;
