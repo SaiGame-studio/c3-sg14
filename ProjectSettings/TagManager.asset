@@ -41,6 +41,9 @@ TagManager:
   - name: Background
     uniqueID: 3422912695
     locked: 0
+  - name: Planet
+    uniqueID: 1004010203
+    locked: 0
   - name: Station
     uniqueID: 3108706959
     locked: 0
