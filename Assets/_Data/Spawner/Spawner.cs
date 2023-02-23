@@ -23,7 +23,7 @@ public abstract class Spawner : SaiMonoBehaviour
     {
         if (this.holder != null) return;
         this.holder = transform.Find("Holder");
-        Debug.Log(transform.name + ": LoadHodler", gameObject);
+        Debug.LogWarning(transform.name + ": LoadHodler", gameObject);
     }
 
     protected virtual void LoadPrefabs()
@@ -38,7 +38,7 @@ public abstract class Spawner : SaiMonoBehaviour
 
         this.HidePrefabs();
 
-        Debug.Log(transform.name + ": LoadPrefabs", gameObject);
+        Debug.LogWarning(transform.name + ": LoadPrefabs", gameObject);
     }
 
     protected virtual void HidePrefabs()
