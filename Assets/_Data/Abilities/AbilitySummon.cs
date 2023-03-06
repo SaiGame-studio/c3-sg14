@@ -15,7 +15,7 @@ public class AbilitySummon: BaseAbility
 
     protected virtual void Summoning()
     {
-        if (!this.isRead) return;
+        if (!this.isReady) return;
         this.Summon();
     }
 
