@@ -31,7 +31,7 @@ public abstract class Spawner : SaiMonoBehaviour
         if (this.prefabs.Count > 0) return;
 
         Transform prefabObj = transform.Find("Prefabs");
-        foreach(Transform prefab in prefabObj)
+        foreach (Transform prefab in prefabObj)
         {
             this.prefabs.Add(prefab);
         }
@@ -43,16 +43,16 @@ public abstract class Spawner : SaiMonoBehaviour
 
     protected virtual void HidePrefabs()
     {
-        foreach(Transform prefab in this.prefabs)
+        foreach (Transform prefab in this.prefabs)
         {
             prefab.gameObject.SetActive(false);
         }
     }
 
-    public virtual Transform Spawn(string prefabName, Vector3 spawnPos,Quaternion rotation)
+    public virtual Transform Spawn(string prefabName, Vector3 spawnPos, Quaternion rotation)
     {
         Transform prefab = this.GetPrefabByName(prefabName);
-        if(prefab == null)
+        if (prefab == null)
         {
             Debug.LogWarning("Prefab not found: " + prefabName);
             return null;
@@ -74,11 +74,12 @@ public abstract class Spawner : SaiMonoBehaviour
 
     protected virtual Transform GetObjectFromPool(Transform prefab)
     {
-        foreach(Transform poolObj in this.poolObjs)
+        foreach (Transform poolObj in this.poolObjs)
         {
             if (poolObj == null) continue;
 
-            if (poolObj.name == prefab.name)  {
+            if (poolObj.name == prefab.name)
+            {
                 this.poolObjs.Remove(poolObj);
                 return poolObj;
             }
@@ -98,7 +99,7 @@ public abstract class Spawner : SaiMonoBehaviour
 
     public virtual Transform GetPrefabByName(string prefabName)
     {
-        foreach(Transform prefab in this.prefabs)
+        foreach (Transform prefab in this.prefabs)
         {
             if (prefab.name == prefabName) return prefab;
         }
