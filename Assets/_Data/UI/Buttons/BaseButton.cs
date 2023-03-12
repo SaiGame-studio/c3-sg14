@@ -24,7 +24,7 @@ public abstract class BaseButton : SaiMonoBehaviour
     {
         if (this.button != null) return;
         this.button = GetComponent<Button>();
-        Debug.Log(transform.name + ": LoadButton", gameObject);
+        Debug.LogWarning(transform.name + ": LoadButton", gameObject);
     }
 
     protected virtual void AddOnClickEvent()
