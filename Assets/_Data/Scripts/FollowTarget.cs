@@ -18,4 +18,9 @@ public class FollowTarget : SaiMonoBehaviour
         if (this.target == null) return;
         transform.position = Vector3.Lerp(transform.position, this.target.position, Time.fixedDeltaTime * this.speed);
     }
+
+    public virtual void SetTarget(Transform target)
+    {
+        this.target = target;
+    }
 }
