@@ -2070,7 +2070,7 @@ MonoBehaviour:
   objMovement: {fileID: 1364925836}
   objLookAtTarget: {fileID: 1389432621}
   spawner: {fileID: 1289362470}
-  damageReceiver: {fileID: 0}
+  damageReceiver: {fileID: 1663586930}
   spawnPoints: {fileID: 1382689036}
 --- !u!4 &567331561
 Transform:
@@ -2393,7 +2393,7 @@ MonoBehaviour:
   objMovement: {fileID: 1056748959}
   objLookAtTarget: {fileID: 890733844}
   spawner: {fileID: 1114561241}
-  damageReceiver: {fileID: 0}
+  damageReceiver: {fileID: 1973741387}
   spawnPoints: {fileID: 212687801}
 --- !u!4 &676678676
 Transform:
