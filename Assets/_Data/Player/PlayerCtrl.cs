@@ -31,6 +31,6 @@ public class PlayerCtrl : SaiMonoBehaviour
     {
         if (this.playerPickup != null) return;
         this.playerPickup = transform.GetComponentInChildren<PlayerPickup>();
-        Debug.Log(transform.name + ": LoadPlayerPickup", gameObject);
+        Debug.LogWarning(transform.name + ": LoadPlayerPickup", gameObject);
     }
 }
