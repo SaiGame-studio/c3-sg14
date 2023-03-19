@@ -62,7 +62,7 @@ public abstract class DamageReceiver : SaiMonoBehaviour
         this.CheckIsDead();
     }
 
-    protected virtual bool IsDead()
+    public virtual bool IsDead()
     {
         return this.hp <= 0;
     }

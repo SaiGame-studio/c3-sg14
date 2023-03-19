@@ -25,7 +25,6 @@ public class ShootableObjectDamReceiver : DamageReceiver
         this.OnDeadFX();
         this.OnDeadDrop();
         this.shootablObjectCtrl.Despawn.DespawnObject();
-
     }
 
     protected virtual void OnDeadDrop()

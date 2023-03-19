@@ -9,6 +9,7 @@ public class HPBar : SaiMonoBehaviour
     [SerializeField] protected ShootableObjectCtrl shootableObjectCtrl;
     [SerializeField] protected SliderHp sliderHp;
     [SerializeField] protected FollowTarget followTarget;
+    [SerializeField] protected Spawner spawner;
 
     protected virtual void FixedUpdate()
     {
@@ -20,6 +21,14 @@ public class HPBar : SaiMonoBehaviour
         base.LoadComponents();
         this.LoadSliderHp();
         this.LoadFollowTarget();
+        this.LoadSpawner();
+    }
+
+    protected virtual void LoadSpawner()
+    {
+        if (this.spawner != null) return;
+        this.spawner = transform.parent.parent.GetComponent<Spawner>();
+        Debug.LogWarning(transform.name + ": LoadSpawner", gameObject);
     }
 
     protected virtual void LoadSliderHp()
@@ -39,12 +48,19 @@ public class HPBar : SaiMonoBehaviour
     protected virtual void HPShowing()
     {
         if (this.shootableObjectCtrl == null) return;
+        bool isDead = this.shootableObjectCtrl.DamageReceiver.IsDead();
+        if (isDead)
+        {
+            this.spawner.Despawn(transform);
+            return;
+        }
 
         float hp = this.shootableObjectCtrl.DamageReceiver.HP;
         float maxHp = this.shootableObjectCtrl.DamageReceiver.HPMax;
 
         this.sliderHp.SetCurrentHp(hp);
         this.sliderHp.SetMaxHp(maxHp);
+
     }
 
     public virtual void SetObjectCtrl(ShootableObjectCtrl shootableObjectCtrl)
