@@ -6,8 +6,8 @@ public class UIInventory : SaiMonoBehaviour
 {
     private static UIInventory instance;
     public static UIInventory Instance => instance;
-    
-    protected bool isOpen = false;
+
+    protected bool isOpen = true;
 
     protected override void Awake()
     {
@@ -19,7 +19,12 @@ public class UIInventory : SaiMonoBehaviour
     protected override void Start()
     {
         base.Start();
-        this.Close();
+        //this.Close();
+    }
+
+    protected virtual void FixedUpdate()
+    {
+        this.ShowItem();
     }
 
     public virtual void Toggle()
@@ -39,5 +44,12 @@ public class UIInventory : SaiMonoBehaviour
     {
         gameObject.SetActive(false);
         this.isOpen = false;
+    }
+
+    protected virtual void ShowItem()
+    {
+        if (!this.isOpen) return;
+        float itemCount = PlayerCtrl.Instance.CurrentShip.Inventory.Items.Count;
+        Debug.Log("itemCount: " + itemCount);
     }
 }
