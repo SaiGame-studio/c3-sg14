@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class UIInventoryCtrl : SaiMonoBehaviour
 {
+    [Header("Inv Item Spawner")]
     [SerializeField] protected Transform content;
     public Transform Content => content;
 
-    [Header("Inv Item Spawner")]
     [SerializeField] protected UIInvItemSpawner invItemSpawner;
     public UIInvItemSpawner UIInvItemSpawner => invItemSpawner;
         
