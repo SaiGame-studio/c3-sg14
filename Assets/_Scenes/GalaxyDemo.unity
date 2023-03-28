@@ -8374,6 +8374,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1850379584}
+  - component: {fileID: 1850379585}
   m_Layer: 5
   m_Name: UIInvItem
   m_TagString: Untagged
@@ -8402,6 +8403,20 @@ RectTransform:
   m_AnchoredPosition: {x: -105, y: 75}
   m_SizeDelta: {x: 90, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1850379585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850379583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04bfac343c036dd428c116d39ed83927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: {fileID: 0}
+  itemNumber: {fileID: 0}
 --- !u!1 &1851417336
 GameObject:
   m_ObjectHideFlags: 0
