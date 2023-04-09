@@ -8415,8 +8415,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04bfac343c036dd428c116d39ed83927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: {fileID: 0}
-  itemNumber: {fileID: 0}
+  itemName: {fileID: 1425371474}
+  itemNumber: {fileID: 2026156126}
 --- !u!1 &1851417336
 GameObject:
   m_ObjectHideFlags: 0
@@ -9115,7 +9115,7 @@ GameObject:
   - component: {fileID: 2026156127}
   - component: {fileID: 2026156126}
   m_Layer: 5
-  m_Name: ItemCount
+  m_Name: ItemNumber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

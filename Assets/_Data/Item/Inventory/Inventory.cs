@@ -126,6 +126,7 @@ public class Inventory : SaiMonoBehaviour
     {
         ItemInventory itemInventory = new ItemInventory
         {
+            itemId = ItemInventory.RandomId(),
             itemProfile = itemProfile,
             maxStack = itemProfile.defaultMaxStack
         };
