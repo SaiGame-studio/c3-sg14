@@ -5,6 +5,9 @@ public class UIItemInventory : SaiMonoBehaviour
 {
     [Header("UI Item Inventory")]
 
+    [SerializeField] protected ItemInventory itemInventory;
+    public ItemInventory ItemInventory => itemInventory;
+
     [SerializeField] protected Text itemName;
     public Text ItemName => itemName;
 
@@ -34,7 +37,8 @@ public class UIItemInventory : SaiMonoBehaviour
 
     public virtual void ShowItem(ItemInventory item)
     {
-        this.itemName.text = item.itemProfile.itemName;
-        this.itemNumber.text = item.itemCount.ToString();
+        this.itemInventory = item;
+        this.itemName.text = this.itemInventory.itemProfile.itemName;
+        this.itemNumber.text = this.itemInventory.itemCount.ToString();
     }
 }
