@@ -393,7 +393,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2047164430}
   m_HandleRect: {fileID: 2047164429}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -3550,7 +3550,7 @@ RectTransform:
   m_Children:
   - {fileID: 944941140}
   m_Father: {fileID: 979820503}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3686,7 +3686,7 @@ RectTransform:
   - {fileID: 56946814}
   - {fileID: 1333774933}
   m_Father: {fileID: 979820503}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5366,8 +5366,8 @@ RectTransform:
   - {fileID: 559007568}
   - {fileID: 824656769}
   - {fileID: 1472295796}
-  - {fileID: 677384229}
   - {fileID: 677896808}
+  - {fileID: 677384229}
   m_Father: {fileID: 1234526618}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7354,7 +7354,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1403546915
 Transform:
   m_ObjectHideFlags: 0
@@ -8264,7 +8264,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 852574915}
+    m_TransformParent: {fileID: 377181195}
     m_Modifications:
     - target: {fileID: 5545928501162001368, guid: 33f5adc95477d1e4e8c0d522b3b3c749, type: 3}
       propertyPath: m_Name
@@ -10212,7 +10212,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 13917174}
+    m_TransformParent: {fileID: 358435848}
     m_Modifications:
     - target: {fileID: 5545928501162001368, guid: 33f5adc95477d1e4e8c0d522b3b3c749, type: 3}
       propertyPath: m_Name
