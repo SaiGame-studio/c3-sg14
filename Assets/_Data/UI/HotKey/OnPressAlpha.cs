@@ -22,7 +22,7 @@ public class OnPressAlpha : UIHotKeyAbtract
 
     protected virtual void Press(int alpha)
     {
-        Debug.Log("Press: " + alpha);
+        //Debug.Log("Press: " + alpha);
         ItemSlot itemSlot = this.hotKeyCtrl.itemSlots[alpha];
         Pressable pressable = itemSlot.GetComponentInChildren<Pressable>();
         if (pressable == null) return;
