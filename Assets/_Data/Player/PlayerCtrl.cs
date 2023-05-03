@@ -14,6 +14,9 @@ public class PlayerCtrl : SaiMonoBehaviour
     [SerializeField] protected PlayerPickup playerPickup;
     public PlayerPickup PlayerPickup => playerPickup;
 
+    [SerializeField] protected PlayerAbility playerAbility;
+    public PlayerAbility PlayerAbility => playerAbility;
+
     protected override void Awake()
     {
         base.Awake();
@@ -25,6 +28,7 @@ public class PlayerCtrl : SaiMonoBehaviour
     {
         base.LoadComponents();
         this.LoadPlayerPickup();
+        this.LoadPlayerAbility();
     }
 
     protected virtual void LoadPlayerPickup()
@@ -32,5 +36,12 @@ public class PlayerCtrl : SaiMonoBehaviour
         if (this.playerPickup != null) return;
         this.playerPickup = transform.GetComponentInChildren<PlayerPickup>();
         Debug.LogWarning(transform.name + ": LoadPlayerPickup", gameObject);
+    }
+
+    protected virtual void LoadPlayerAbility()
+    {
+        if (this.playerAbility != null) return;
+        this.playerAbility = transform.GetComponentInChildren<PlayerAbility>();
+        Debug.LogWarning(transform.name + ": LoadPlayerAbility", gameObject);
     }
 }
