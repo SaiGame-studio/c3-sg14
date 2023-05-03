@@ -393,8 +393,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2047164430}
   m_HandleRect: {fileID: 2047164429}
   m_Direction: 0
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6191,6 +6191,7 @@ GameObject:
   - component: {fileID: 1158202934}
   - component: {fileID: 1158202933}
   - component: {fileID: 1158202935}
+  - component: {fileID: 1158202936}
   m_Layer: 5
   m_Name: UIHotKey
   m_TagString: Untagged
@@ -6266,6 +6267,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e1916916107e624e8f7f425169516e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1158202936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158202931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03418dd5746f1e4ba24a3f29b5542f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1161948974
