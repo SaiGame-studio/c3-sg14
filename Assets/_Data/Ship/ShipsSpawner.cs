@@ -11,4 +11,8 @@ public class ShipsSpawner : Spawner
         ShipsSpawner.instance = this;
     }
 
+    public virtual Transform Spawn(ShipCode shipCode)
+    {
+        return this.Spawn(shipCode.ToString(), Vector3.zero, Quaternion.identity);
+    }
 }
