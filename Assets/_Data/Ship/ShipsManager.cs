@@ -85,8 +85,15 @@ public class ShipsManager : SaiMonoBehaviour
 
     protected virtual void SpawnShip(ShipCtrl shipCtrl, int index)
     {
-        Transform point = this.spawnPoints[index];
+        Transform point;
+        ShipMoveFoward shipMoveFoward;
+
+        point = this.spawnPoints[index];
         shipCtrl.transform.position = point.position;
         shipCtrl.gameObject.SetActive(true);
+
+        point = this.standPoints[index];
+        shipMoveFoward = shipCtrl.ObjMovement as ShipMoveFoward;
+        if(shipMoveFoward != null) shipMoveFoward.SetMoveTarget(point);
     }
 }

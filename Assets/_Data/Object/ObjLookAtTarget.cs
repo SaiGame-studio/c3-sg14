@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObjLookAtTarget : SaiMonoBehaviour
 {
-
+    [Header("Look At Target")]
     [SerializeField] protected Vector3 targetPosition;
     [SerializeField] protected float rotSpeed = 3f;
 
