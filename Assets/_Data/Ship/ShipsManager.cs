@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -44,8 +43,6 @@ public abstract class ShipsManager : SaiMonoBehaviour
 
     public virtual void SpawnShips()
     {
-        Debug.Log("SpawnShips");
-
         int index = 0;
         foreach (ShipCtrl shipCtrl in this.ships)
         {
