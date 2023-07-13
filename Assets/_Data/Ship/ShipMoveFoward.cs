@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjMoveFoward: ObjMovement 
+public class ShipMoveFoward : ObjMovement 
 {
-    [Header("Move Foward")]
+    [Header("Move Ship Foward")]
     [SerializeField] protected Transform moveTarget;
     
     protected override void FixedUpdate()
@@ -24,6 +22,11 @@ public class ObjMoveFoward: ObjMovement
         if (this.moveTarget != null) return;
         this.moveTarget = transform.Find("MoveTarget");
         Debug.Log(transform.name + ": LoadMoveTarget", gameObject);
+    }
+
+    public virtual void SetMoveTarget(Transform target)
+    {
+        this.moveTarget = target;
     }
 
     protected virtual void GetMovePosition()

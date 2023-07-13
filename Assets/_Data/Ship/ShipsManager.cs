@@ -2,46 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShipsManager : SaiMonoBehaviour
+public abstract class ShipsManager : SaiMonoBehaviour
 {
     [SerializeField] protected List<ShipCtrl> ships = new List<ShipCtrl>();
     [SerializeField] protected List<Transform> spawnPoints = new List<Transform>();
     [SerializeField] protected List<Transform> standPoints = new List<Transform>();
-
-    protected override void Start()
-    {
-        base.Start();
-        this.TestAddShips();
-        Invoke(nameof(this.SpawnShips), 3);
-    }
 
     protected override void LoadComponents()
     {
         base.LoadComponents();
         this.LoadSpawnPoints();
         this.LoadStandPoints();
-    }
-
-    protected virtual void TestAddShips()
-    {
-        Transform shipObj;
-        ShipCtrl shipCtrl;
-
-        shipObj = ShipsSpawner.Instance.Spawn(ShipCode.Fighter);
-        shipCtrl = shipObj.GetComponent<ShipCtrl>();
-        this.AddShip(shipCtrl);
-
-        shipObj = ShipsSpawner.Instance.Spawn(ShipCode.Healer);
-        shipCtrl = shipObj.GetComponent<ShipCtrl>();
-        this.AddShip(shipCtrl);
-
-        shipObj = ShipsSpawner.Instance.Spawn(ShipCode.Tanker);
-        shipCtrl = shipObj.GetComponent<ShipCtrl>();
-        this.AddShip(shipCtrl);
-
-        shipObj = ShipsSpawner.Instance.Spawn(ShipCode.Miner);
-        shipCtrl = shipObj.GetComponent<ShipCtrl>();
-        this.AddShip(shipCtrl);
     }
 
     protected virtual void LoadSpawnPoints()
@@ -83,10 +54,5 @@ public class ShipsManager : SaiMonoBehaviour
         }
     }
 
-    protected virtual void SpawnShip(ShipCtrl shipCtrl, int index)
-    {
-        Transform point = this.spawnPoints[index];
-        shipCtrl.transform.position = point.position;
-        shipCtrl.gameObject.SetActive(true);
-    }
+    protected abstract void SpawnShip(ShipCtrl shipCtrl, int index);
 }
