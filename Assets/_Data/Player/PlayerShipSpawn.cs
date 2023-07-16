@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerShipSpawn : ShipSpawnManager
+public class PlayerShipSpawn : ShipManagerAbstact
 {
 
     protected override void Start()
     {
         base.Start();
         this.TestAddShips();
-        Invoke(nameof(this.SpawnShips), 3);
+        //Invoke(nameof(this.SpawnShips), 3);
     }
 
     protected virtual void TestAddShips()
@@ -19,19 +19,19 @@ public class PlayerShipSpawn : ShipSpawnManager
 
         shipObj = ShipsSpawner.Instance.Spawn(ShipCode.Fighter);
         shipCtrl = shipObj.GetComponent<ShipCtrl>();
-        this.shipsManager.AddShip(shipCtrl);
+        //this.shipsManager.AddShip(shipCtrl);
 
         shipObj = ShipsSpawner.Instance.Spawn(ShipCode.Healer);
         shipCtrl = shipObj.GetComponent<ShipCtrl>();
-        this.shipsManager.AddShip(shipCtrl);
+        //this.shipsManager.AddShip(shipCtrl);
 
         shipObj = ShipsSpawner.Instance.Spawn(ShipCode.Tanker);
         shipCtrl = shipObj.GetComponent<ShipCtrl>();
-        this.shipsManager.AddShip(shipCtrl);
+        //this.shipsManager.AddShip(shipCtrl);
 
         shipObj = ShipsSpawner.Instance.Spawn(ShipCode.Miner);
         shipCtrl = shipObj.GetComponent<ShipCtrl>();
-        this.shipsManager.AddShip(shipCtrl);
+        //this.shipsManager.AddShip(shipCtrl);
     }
 
 }
