@@ -5,7 +5,10 @@ using UnityEngine;
 public class PointsManager : SaiMonoBehaviour
 {
     [SerializeField] protected List<Transform> spawnPoints = new List<Transform>();
+    public List<Transform> SpawnPoints => spawnPoints;
+
     [SerializeField] protected List<Transform> standPoints = new List<Transform>();
+    public List<Transform> StandPoints => standPoints;
 
     protected override void LoadComponents()
     {
