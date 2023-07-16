@@ -12,6 +12,12 @@ public class ShipLookForward : ObjLookAtTarget
         this.SetupLookTarget();
     }
 
+    protected override void ResetValue()
+    {
+        base.ResetValue();
+        this.rotSpeed = 27;
+    }
+
     protected override void LoadComponents()
     {
         base.LoadComponents();
