@@ -11,6 +11,7 @@ public class TextShipHP : BaseText
 
     protected virtual void UpdateShipHP()
     {
+        if (PlayerCtrl.Instance.CurrentShip == null) return;
         int hpMx = PlayerCtrl.Instance.CurrentShip.DamageReceiver.HPMax;
         int hp = PlayerCtrl.Instance.CurrentShip.DamageReceiver.HP;
 

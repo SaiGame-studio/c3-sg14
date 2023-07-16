@@ -23,7 +23,7 @@ public class AbilitySummonEnemy : AbilitySummon
     {
         if (this.spawner != null) return;
         GameObject enemySpawner = GameObject.Find("EnemySpawner");
-        this.spawner = enemySpawner.GetComponent<EnemySpawner>();
+        this.spawner = enemySpawner.GetComponent<EnemyShipsSpawner>();
         Debug.LogWarning(transform.name + ": LoadAbilities", gameObject);
     }
 

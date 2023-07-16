@@ -15,22 +15,22 @@ public class PlayerShipSpawn : ShipManagerAbstact
     protected virtual void TestAddShips()
     {
         Transform shipObj;
-        ShipCtrl shipCtrl;
+        PlayerShipCtrl shipCtrl;
 
-        shipObj = ShipsSpawner.Instance.Spawn(ShipCode.Fighter);
-        shipCtrl = shipObj.GetComponent<ShipCtrl>();
+        shipObj = PlayerShipsSpawner.Instance.Spawn(ShipCode.Fighter);
+        shipCtrl = shipObj.GetComponent<PlayerShipCtrl>();
         this.shipManagerCtrl.shipsManager.AddShip(shipCtrl);
 
-        shipObj = ShipsSpawner.Instance.Spawn(ShipCode.Healer);
-        shipCtrl = shipObj.GetComponent<ShipCtrl>();
+        shipObj = PlayerShipsSpawner.Instance.Spawn(ShipCode.Healer);
+        shipCtrl = shipObj.GetComponent<PlayerShipCtrl>();
         this.shipManagerCtrl.shipsManager.AddShip(shipCtrl);
 
-        shipObj = ShipsSpawner.Instance.Spawn(ShipCode.Tanker);
-        shipCtrl = shipObj.GetComponent<ShipCtrl>();
+        shipObj = PlayerShipsSpawner.Instance.Spawn(ShipCode.Tanker);
+        shipCtrl = shipObj.GetComponent<PlayerShipCtrl>();
         this.shipManagerCtrl.shipsManager.AddShip(shipCtrl);
 
-        shipObj = ShipsSpawner.Instance.Spawn(ShipCode.Miner);
-        shipCtrl = shipObj.GetComponent<ShipCtrl>();
+        shipObj = PlayerShipsSpawner.Instance.Spawn(ShipCode.Miner);
+        shipCtrl = shipObj.GetComponent<PlayerShipCtrl>();
         this.shipManagerCtrl.shipsManager.AddShip(shipCtrl);
     }
 
@@ -39,14 +39,14 @@ public class PlayerShipSpawn : ShipManagerAbstact
         Debug.Log("SpawnShips");
 
         int index = 0;
-        foreach (ShipCtrl shipCtrl in this.shipManagerCtrl.shipsManager.Ships)
+        foreach (PlayerShipCtrl shipCtrl in this.shipManagerCtrl.shipsManager.Ships)
         {
             this.SpawnShip(shipCtrl, index);
             index++;
         }
     }
 
-    protected virtual void SpawnShip(ShipCtrl shipCtrl, int index)
+    protected virtual void SpawnShip(PlayerShipCtrl shipCtrl, int index)
     {
         Transform point;
         ShipMoveFoward shipMoveFoward;

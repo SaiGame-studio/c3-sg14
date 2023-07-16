@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShipCtrl : AbilityObjectCtrl
+public class PlayerShipCtrl : AbilityObjectCtrl
 {
     [Header("Ship")]
     [SerializeField] protected Inventory inventory;
