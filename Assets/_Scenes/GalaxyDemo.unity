@@ -217,7 +217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 13136903}
   m_Layer: 0
-  m_Name: point_3
+  m_Name: point_4
   m_TagString: Untagged
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -235,7 +235,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1953476293}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &13917173
 PrefabInstance:
@@ -1186,7 +1186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 197650531}
   m_Layer: 0
-  m_Name: point_4
+  m_Name: point_3
   m_TagString: Untagged
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1204,7 +1204,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1953476293}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &203141446
 GameObject:
@@ -1574,7 +1574,7 @@ Transform:
   - {fileID: 1153849925}
   - {fileID: 1491570722}
   m_Father: {fileID: 1743042201}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &217834674
 MonoBehaviour:
@@ -5179,7 +5179,7 @@ GameObject:
   m_Layer: 0
   m_Name: point_2
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -7893,7 +7893,7 @@ GameObject:
   m_Layer: 0
   m_Name: point_1
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -8138,7 +8138,7 @@ GameObject:
   m_Layer: 0
   m_Name: point_4
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -8443,7 +8443,7 @@ Transform:
   - {fileID: 2029737498}
   - {fileID: 138541747}
   m_Father: {fileID: 1743042201}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1114561241
 MonoBehaviour:
@@ -9354,7 +9354,7 @@ GameObject:
   - component: {fileID: 1235740571}
   - component: {fileID: 1235740572}
   m_Layer: 0
-  m_Name: ShipSpawn
+  m_Name: PlayerShipSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10327,7 +10327,7 @@ GameObject:
   m_Layer: 0
   m_Name: point_5
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -13137,9 +13137,9 @@ Transform:
   - {fileID: 141459883}
   - {fileID: 1667947252}
   - {fileID: 526181047}
-  - {fileID: 1114561240}
-  - {fileID: 1289362469}
   - {fileID: 217834673}
+  - {fileID: 1289362469}
+  - {fileID: 1114561240}
   - {fileID: 1171677034}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -13528,8 +13528,8 @@ MonoBehaviour:
   standPoints:
   - {fileID: 1850781726}
   - {fileID: 792494437}
-  - {fileID: 13136903}
   - {fileID: 197650531}
+  - {fileID: 13136903}
   - {fileID: 106131130}
 --- !u!1 &1850379583
 GameObject:
@@ -14185,8 +14185,8 @@ Transform:
   m_Children:
   - {fileID: 1850781726}
   - {fileID: 792494437}
-  - {fileID: 13136903}
   - {fileID: 197650531}
+  - {fileID: 13136903}
   - {fileID: 106131130}
   m_Father: {fileID: 1845773011}
   m_RootOrder: 1
@@ -14657,7 +14657,7 @@ GameObject:
   m_Layer: 0
   m_Name: point_3
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
