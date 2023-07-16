@@ -1,14 +1,14 @@
 using UnityEngine;
 
-public class EnemySpawner : Spawner
+public class EnemyShipsSpawner : Spawner
 {
-    private static EnemySpawner instance;
-    public static EnemySpawner Instance => instance;
+    private static EnemyShipsSpawner instance;
+    public static EnemyShipsSpawner Instance => instance;
     protected override void Awake()
     {
         base.Awake();
-        if (EnemySpawner.instance != null) Debug.LogError("Only 1 EnemySpawner allow to exist");
-        EnemySpawner.instance = this;
+        if (EnemyShipsSpawner.instance != null) Debug.LogError("Only 1 EnemyShipsSpawner allow to exist");
+        EnemyShipsSpawner.instance = this;
     }
 
     public override Transform Spawn(Transform prefab, Vector3 spawnPos, Quaternion rotation)

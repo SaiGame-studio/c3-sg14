@@ -3038,7 +3038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5c12b32f36d3742bc5ca58faf2c437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentShip: {fileID: 1645776045}
+  currentShip: {fileID: 0}
   playerPickup: {fileID: 2009342817}
   playerAbility: {fileID: 467573736}
 --- !u!4 &405415748
@@ -4572,7 +4572,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 658620623}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35c3a067953809f418c5975ec387a130, type: 3}
+  m_Script: {fileID: 11500000, guid: 2ffea2a71b99d2449823d8a4d7dad52a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 524004490}
@@ -4726,7 +4726,7 @@ MonoBehaviour:
   objShooting: {fileID: 266025867}
   objMovement: {fileID: 1056748959}
   objLookAtTarget: {fileID: 890733844}
-  spawner: {fileID: 1114561241}
+  spawner: {fileID: 0}
   damageReceiver: {fileID: 1973741387}
   spawnPoints: {fileID: 212687801}
 --- !u!4 &676678676
@@ -8421,9 +8421,8 @@ GameObject:
   - component: {fileID: 1114561240}
   - component: {fileID: 1114561242}
   - component: {fileID: 1114561241}
-  - component: {fileID: 1114561243}
   m_Layer: 0
-  m_Name: EnemySpawner
+  m_Name: EnemyShipsSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8454,7 +8453,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1114561239}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 360fd4d26f15432429f4d20d4dfa9475, type: 3}
+  m_Script: {fileID: 11500000, guid: 48844d1a7d9a02d46b3b588f33b93c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   holder: {fileID: 138541747}
@@ -8476,22 +8475,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner: {fileID: 1114561241}
   spawnPoints: {fileID: 1028662658}
---- !u!114 &1114561243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1114561239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c11fe91fc72cbd44816f21c33e4d715, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnerCtrl: {fileID: 1114561242}
-  randomDelay: 1
-  randomTimer: 0
-  randomLimit: 1
 --- !u!4 &1119378156 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2935311133260703311, guid: a26e73dd28ded2c4d97ea418dabc7909, type: 3}
@@ -8881,7 +8864,7 @@ GameObject:
   - component: {fileID: 1171677036}
   - component: {fileID: 1171677035}
   m_Layer: 0
-  m_Name: ShipsSpawner
+  m_Name: PlayerShipsSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9031,7 +9014,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1185818818}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35c3a067953809f418c5975ec387a130, type: 3}
+  m_Script: {fileID: 11500000, guid: 2ffea2a71b99d2449823d8a4d7dad52a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 883878426}
@@ -9523,8 +9506,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1274061995}
+  - component: {fileID: 1274061996}
   m_Layer: 0
-  m_Name: ShipSpawn
+  m_Name: EnemyShipSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9544,6 +9528,22 @@ Transform:
   m_Father: {fileID: 1900958931}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1274061996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274061994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ed6a0a1d1d352e46be3e4556d628877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipManagerCtrl: {fileID: 1900958932}
+  timer: 0
+  delay: 2
+  limit: 2
 --- !u!1 &1277290207
 GameObject:
   m_ObjectHideFlags: 0
@@ -9650,7 +9650,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1289362469
 Transform:
   m_ObjectHideFlags: 0
@@ -12389,7 +12389,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1645776043}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35c3a067953809f418c5975ec387a130, type: 3}
+  m_Script: {fileID: 11500000, guid: 2ffea2a71b99d2449823d8a4d7dad52a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 3494788792318899560}
@@ -13026,7 +13026,7 @@ MonoBehaviour:
   timer: 2
   delay: 2
   isReady: 0
-  spawner: {fileID: 1114561241}
+  spawner: {fileID: 0}
   minions: []
   minionLimit: 4
 --- !u!1 &1733812797
@@ -14464,7 +14464,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1964626285}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35c3a067953809f418c5975ec387a130, type: 3}
+  m_Script: {fileID: 11500000, guid: 2ffea2a71b99d2449823d8a4d7dad52a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 1751117024}

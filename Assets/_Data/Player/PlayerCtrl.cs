@@ -8,8 +8,8 @@ public class PlayerCtrl : SaiMonoBehaviour
     private static PlayerCtrl instance;
     public static PlayerCtrl Instance => instance;
 
-    [SerializeField] protected ShipCtrl currentShip;
-    public ShipCtrl CurrentShip => currentShip;
+    [SerializeField] protected PlayerShipCtrl currentShip;
+    public PlayerShipCtrl CurrentShip => currentShip;
 
     [SerializeField] protected PlayerPickup playerPickup;
     public PlayerPickup PlayerPickup => playerPickup;
