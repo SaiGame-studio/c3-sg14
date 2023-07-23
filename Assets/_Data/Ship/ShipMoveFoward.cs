@@ -31,6 +31,8 @@ public class ShipMoveFoward : ObjMovement
 
     protected virtual void GetMovePosition()
     {
+        if (this.moveTarget == null) return;
+
         this.targetPosition = this.moveTarget.position;
         this.targetPosition.z = 0;
     }
