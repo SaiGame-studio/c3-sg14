@@ -21,18 +21,21 @@ public class EnemyShipSpawn : ShipManagerAbstact
         if (this.limit <= this.shipManagerCtrl.shipsManager.Ships.Count) return;
         this.timer = 0;
 
-        Transform point;
         ShipMoveFoward shipMoveFoward;
 
-        point = this.GetSpawnPos();
-        Transform shipObj = EnemyShipsSpawner.Instance.Spawn(this.GetEnemyName(), point.position, Quaternion.identity);
+        Transform spawnPoint = this.GetSpawnPos();
+        Transform shipObj = EnemyShipsSpawner.Instance.Spawn(this.GetEnemyName(), spawnPoint.position, Quaternion.identity);
         EnemyCtrl shipCtrl = shipObj.GetComponent<EnemyCtrl>();
         this.shipManagerCtrl.shipsManager.AddShip(shipCtrl);
         shipCtrl.gameObject.SetActive(true);
 
-        point = this.shipManagerCtrl.pointsManager.StandPoints[0];
+        ShipStandPos standPoint = this.shipManagerCtrl.pointsManager.StandPoints[0];
         shipMoveFoward = shipCtrl.ObjMovement as ShipMoveFoward;
-        if (shipMoveFoward != null) shipMoveFoward.SetMoveTarget(point);
+        if (shipMoveFoward != null)
+        {
+            shipMoveFoward.SetMoveTarget(standPoint.transform);
+            standPoint.SetAbilityObjectCtrl(shipCtrl);
+        }
     }
 
     protected virtual Transform GetSpawnPos()
