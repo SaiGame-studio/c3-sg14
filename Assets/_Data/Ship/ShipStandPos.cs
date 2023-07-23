@@ -14,6 +14,19 @@ public class ShipStandPos : SaiMonoBehaviour
         this.LoadLaneId();
     }
 
+    protected virtual void FixedUpdate()
+    {
+        this.CheckObjectStatus();
+    }
+
+    protected virtual void CheckObjectStatus()
+    {
+        if (this.abilityObjectCtrl == null) return;
+        if (this.abilityObjectCtrl.gameObject.activeSelf == true) return;
+
+        this.SetAbilityObjectCtrl(null);
+    }
+
     protected virtual void LoadLaneId()
     {
         string name = transform.name;
