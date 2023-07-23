@@ -14,14 +14,14 @@ public class ShipMoveFoward : ObjMovement
     protected override void LoadComponents()
     {
         base.LoadComponents();
-        this.LoadMoveTarget();
+        //this.LoadMoveTarget();
     }
 
     protected virtual void LoadMoveTarget()
     {
         if (this.moveTarget != null) return;
         this.moveTarget = transform.Find("MoveTarget");
-        Debug.Log(transform.name + ": LoadMoveTarget", gameObject);
+        Debug.LogWarning(transform.name + ": LoadMoveTarget", gameObject);
     }
 
     public virtual void SetMoveTarget(Transform target)
