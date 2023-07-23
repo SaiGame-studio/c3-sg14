@@ -8,6 +8,7 @@ public class EnemyShipSpawn : ShipManagerAbstact
     [SerializeField] protected float timer = 0;
     [SerializeField] protected float delay = 2f;
     [SerializeField] protected int limit = 2;
+    [SerializeField] protected int laneIndex = -1;
 
     protected virtual void FixedUpdate()
     {
@@ -20,6 +21,7 @@ public class EnemyShipSpawn : ShipManagerAbstact
         if (this.timer < this.delay) return;
         if (this.limit <= this.shipManagerCtrl.shipsManager.Ships.Count) return;
         this.timer = 0;
+        Debug.Log("Spawning");
 
         ShipStandPos playerStandPos = this.GetPlayerStandPos();
         if (playerStandPos == null) return;
@@ -27,20 +29,21 @@ public class EnemyShipSpawn : ShipManagerAbstact
         ShipSpawnPos spawnPoint = this.GetSpawnPos(playerStandPos);
         if (spawnPoint == null) return;
 
+        ShipStandPos standPoint = this.GetStandPos(spawnPoint);
+        if (standPoint == null) return;
+
         Transform shipObj = EnemyShipsSpawner.Instance.Spawn(this.GetEnemyName(), spawnPoint.transform.position, Quaternion.identity);
         EnemyCtrl shipCtrl = shipObj.GetComponent<EnemyCtrl>();
         this.shipManagerCtrl.shipsManager.AddShip(shipCtrl);
 
-        ShipStandPos standPoint = this.GetStandPos(spawnPoint);
-        if (standPoint == null) return;
-
-        shipCtrl.gameObject.SetActive(true);
         ShipMoveFoward shipMoveFoward = shipCtrl.ObjMovement as ShipMoveFoward;
         if (shipMoveFoward != null)
         {
             shipMoveFoward.SetMoveTarget(standPoint.transform);
             standPoint.SetAbilityObjectCtrl(shipCtrl);
         }
+
+        shipCtrl.gameObject.SetActive(true);
     }
 
     protected virtual ShipStandPos GetStandPos(ShipSpawnPos spawnPos)
@@ -62,17 +65,15 @@ public class EnemyShipSpawn : ShipManagerAbstact
 
     protected virtual ShipStandPos GetPlayerStandPos()
     {
-        ShipStandPos pos = null;
         List<ShipStandPos> playerStandPoses = PlayerShipsCtrl.Instance.pointsManager.StandPoints;
-        foreach (ShipStandPos playerStandPos in playerStandPoses)
-        {
-            if (!playerStandPos.IsOccupied()) continue;
 
-            pos = playerStandPos;
-            break;
-        }
+        this.laneIndex++;
+        if (this.laneIndex == playerStandPoses.Count) this.laneIndex = 0;
 
-        return pos;
+        ShipStandPos playerStandPos = playerStandPoses[this.laneIndex];
+        if (!playerStandPos.IsOccupied()) return null;
+
+        return playerStandPos;
     }
 
     protected virtual ShipSpawnPos GetSpawnPos(ShipStandPos playerStandPos)
