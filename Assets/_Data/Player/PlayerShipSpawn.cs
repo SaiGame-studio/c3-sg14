@@ -48,15 +48,18 @@ public class PlayerShipSpawn : ShipManagerAbstact
 
     protected virtual void SpawnShip(PlayerShipCtrl shipCtrl, int index)
     {
-        Transform point;
         ShipMoveFoward shipMoveFoward;
 
-        point = this.shipManagerCtrl.pointsManager.SpawnPoints[index];
-        shipCtrl.transform.position = point.position;
+        Transform spawnPoint = this.shipManagerCtrl.pointsManager.SpawnPoints[index];
+        shipCtrl.transform.position = spawnPoint.position;
         shipCtrl.gameObject.SetActive(true);
 
-        point = this.shipManagerCtrl.pointsManager.StandPoints[index];
+        ShipStandPos standPoint = this.shipManagerCtrl.pointsManager.StandPoints[index];
         shipMoveFoward = shipCtrl.ObjMovement as ShipMoveFoward;
-        if (shipMoveFoward != null) shipMoveFoward.SetMoveTarget(point);
+        if (shipMoveFoward != null)
+        {
+            shipMoveFoward.SetMoveTarget(standPoint.transform);
+            standPoint.SetAbilityObjectCtrl(shipCtrl);
+        }
     }
 }
