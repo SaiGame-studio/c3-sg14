@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PointsManager : SaiMonoBehaviour
 {
-    [SerializeField] protected List<Transform> spawnPoints = new List<Transform>();
-    public List<Transform> SpawnPoints => spawnPoints;
+    [SerializeField] protected List<ShipSpawnPos> spawnPoints = new List<ShipSpawnPos>();
+    public List<ShipSpawnPos> SpawnPoints => spawnPoints;
 
     [SerializeField] protected List<ShipStandPos> standPoints = new List<ShipStandPos>();
     public List<ShipStandPos> StandPoints => standPoints;
@@ -23,7 +23,8 @@ public class PointsManager : SaiMonoBehaviour
         Transform points = transform.Find("SpawnPoints");
         foreach (Transform point in points)
         {
-            this.spawnPoints.Add(point);
+            ShipSpawnPos shipSpawnPos = point.GetComponent<ShipSpawnPos>();
+            this.spawnPoints.Add(shipSpawnPos);
         }
         Debug.LogWarning(transform.name + ": LoadSpawnPoints", gameObject);
     }
