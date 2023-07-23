@@ -50,7 +50,7 @@ public class PlayerShipSpawn : ShipManagerAbstact
     {
         ShipMoveFoward shipMoveFoward;
 
-        Transform spawnPoint = this.shipManagerCtrl.pointsManager.SpawnPoints[index];
+        Transform spawnPoint = this.shipManagerCtrl.pointsManager.SpawnPoints[index].transform;
         shipCtrl.transform.position = spawnPoint.position;
         shipCtrl.gameObject.SetActive(true);
 

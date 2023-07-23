@@ -21,16 +21,17 @@ public class EnemyShipSpawn : ShipManagerAbstact
         if (this.limit <= this.shipManagerCtrl.shipsManager.Ships.Count) return;
         this.timer = 0;
 
-        ShipMoveFoward shipMoveFoward;
+        ShipStandPos playerStandPos = this.GetPlayerStandPos();
+        if (playerStandPos == null) return;
 
-        Transform spawnPoint = this.GetSpawnPos();
+        Transform spawnPoint = this.GetSpawnPos(playerStandPos);
         Transform shipObj = EnemyShipsSpawner.Instance.Spawn(this.GetEnemyName(), spawnPoint.position, Quaternion.identity);
         EnemyCtrl shipCtrl = shipObj.GetComponent<EnemyCtrl>();
         this.shipManagerCtrl.shipsManager.AddShip(shipCtrl);
         shipCtrl.gameObject.SetActive(true);
 
         ShipStandPos standPoint = this.shipManagerCtrl.pointsManager.StandPoints[0];
-        shipMoveFoward = shipCtrl.ObjMovement as ShipMoveFoward;
+        ShipMoveFoward shipMoveFoward = shipCtrl.ObjMovement as ShipMoveFoward;
         if (shipMoveFoward != null)
         {
             shipMoveFoward.SetMoveTarget(standPoint.transform);
@@ -38,10 +39,26 @@ public class EnemyShipSpawn : ShipManagerAbstact
         }
     }
 
-    protected virtual Transform GetSpawnPos()
+    protected virtual ShipStandPos GetPlayerStandPos()
     {
+        ShipStandPos pos = null;
+        List<ShipStandPos> playerStandPoses = PlayerShipsCtrl.Instance.pointsManager.StandPoints;
+        foreach (ShipStandPos playerStandPos in playerStandPoses)
+        {
+            if (!playerStandPos.IsOccupied()) continue;
+
+            pos = playerStandPos;
+            break;
+        }
+
+        return pos;
+    }
+
+    protected virtual Transform GetSpawnPos(ShipStandPos playerStandPos)
+    {
+        int laneId = playerStandPos.LaneId;
         Transform respawnPoint;
-        respawnPoint = this.shipManagerCtrl.pointsManager.SpawnPoints[0];
+        respawnPoint = this.shipManagerCtrl.pointsManager.SpawnPoints[0].transform;
         return respawnPoint;
     }
 
