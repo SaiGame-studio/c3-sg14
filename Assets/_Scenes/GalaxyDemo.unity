@@ -240,6 +240,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
+  laneId: -1
+  maxLane: 5
 --- !u!1001 &13917173
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -448,6 +450,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 43325183}
+  - component: {fileID: 43325184}
   m_Layer: 0
   m_Name: point_5
   m_TagString: Untagged
@@ -463,12 +466,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 43325182}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: 12, z: 0}
+  m_LocalPosition: {x: 3, y: 12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1302454576}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &43325184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43325182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432c2b9a345e66e49b6e38070364c42d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityObjectCtrl: {fileID: 0}
+  laneId: -1
+  maxLane: 5
 --- !u!1 &56946813
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,7 +569,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2047164430}
   m_HandleRect: {fileID: 2047164429}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -732,6 +750,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
+  laneId: -1
+  maxLane: 5
 --- !u!1 &120130765
 GameObject:
   m_ObjectHideFlags: 0
@@ -1235,6 +1255,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
+  laneId: -1
+  maxLane: 5
 --- !u!1 &203141446
 GameObject:
   m_ObjectHideFlags: 0
@@ -3283,6 +3305,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 453173536}
+  - component: {fileID: 453173537}
   m_Layer: 0
   m_Name: point_3
   m_TagString: Untagged
@@ -3298,12 +3321,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 453173535}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 12, z: 0}
+  m_LocalPosition: {x: 1.5, y: 12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1302454576}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &453173537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453173535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432c2b9a345e66e49b6e38070364c42d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityObjectCtrl: {fileID: 0}
+  laneId: -1
+  maxLane: 5
 --- !u!1 &460438620
 GameObject:
   m_ObjectHideFlags: 0
@@ -4318,6 +4356,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
+  laneId: -1
+  maxLane: 5
 --- !u!114 &614735898 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3391543355629786357, guid: a750004e4a8f0ef4982a0ea83274b3f3, type: 3}
@@ -5215,6 +5255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 696893850}
+  - component: {fileID: 696893851}
   m_Layer: 0
   m_Name: point_2
   m_TagString: Untagged
@@ -5230,12 +5271,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 696893849}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: -12, z: 0}
+  m_LocalPosition: {x: -1.5, y: -12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 531043307}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &696893851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696893849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432c2b9a345e66e49b6e38070364c42d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityObjectCtrl: {fileID: 0}
+  laneId: -1
+  maxLane: 5
 --- !u!1 &697139707
 GameObject:
   m_ObjectHideFlags: 0
@@ -5420,6 +5476,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
+  laneId: -1
+  maxLane: 5
 --- !u!1 &736554685
 GameObject:
   m_ObjectHideFlags: 0
@@ -5772,6 +5830,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 758028438}
+  - component: {fileID: 758028439}
   m_Layer: 0
   m_Name: point_2
   m_TagString: Untagged
@@ -5787,12 +5846,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 758028437}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 12, z: 0}
+  m_LocalPosition: {x: -1.5, y: 12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1302454576}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &758028439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758028437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432c2b9a345e66e49b6e38070364c42d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityObjectCtrl: {fileID: 0}
+  laneId: -1
+  maxLane: 5
 --- !u!1001 &762295114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6179,6 +6253,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
+  laneId: -1
+  maxLane: 5
 --- !u!1 &794288852
 GameObject:
   m_ObjectHideFlags: 0
@@ -6902,6 +6978,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
+  laneId: -1
+  maxLane: 5
 --- !u!1 &878508520
 GameObject:
   m_ObjectHideFlags: 0
@@ -7112,6 +7190,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
+  laneId: -1
+  maxLane: 5
 --- !u!1 &935766311
 GameObject:
   m_ObjectHideFlags: 0
@@ -7925,6 +8005,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1027967068}
+  - component: {fileID: 1027967069}
   m_Layer: 0
   m_Name: point_1
   m_TagString: Untagged
@@ -7946,6 +8027,21 @@ Transform:
   m_Father: {fileID: 531043307}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1027967069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027967067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432c2b9a345e66e49b6e38070364c42d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityObjectCtrl: {fileID: 0}
+  laneId: -1
+  maxLane: 5
 --- !u!1 &1028662657
 GameObject:
   m_ObjectHideFlags: 0
@@ -8121,6 +8217,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1064179316}
+  - component: {fileID: 1064179317}
   m_Layer: 0
   m_Name: point_4
   m_TagString: Untagged
@@ -8136,12 +8233,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064179315}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: -12, z: 0}
+  m_LocalPosition: {x: -3, y: -12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 531043307}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1064179317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064179315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432c2b9a345e66e49b6e38070364c42d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityObjectCtrl: {fileID: 0}
+  laneId: -1
+  maxLane: 5
 --- !u!1 &1069267486
 GameObject:
   m_ObjectHideFlags: 0
@@ -8271,6 +8383,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1096517545}
+  - component: {fileID: 1096517546}
   m_Layer: 0
   m_Name: point_1
   m_TagString: Untagged
@@ -8292,6 +8405,21 @@ Transform:
   m_Father: {fileID: 1302454576}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1096517546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096517544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432c2b9a345e66e49b6e38070364c42d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityObjectCtrl: {fileID: 0}
+  laneId: -1
+  maxLane: 5
 --- !u!1 &1103573366
 GameObject:
   m_ObjectHideFlags: 0
@@ -9059,11 +9187,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoints:
-  - {fileID: 1096517545}
-  - {fileID: 758028438}
-  - {fileID: 453173536}
-  - {fileID: 1256979391}
-  - {fileID: 43325183}
+  - {fileID: 1096517546}
+  - {fileID: 758028439}
+  - {fileID: 453173537}
+  - {fileID: 1256979392}
+  - {fileID: 43325184}
   standPoints:
   - {fileID: 1344472841}
   - {fileID: 921870214}
@@ -9408,6 +9536,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1256979391}
+  - component: {fileID: 1256979392}
   m_Layer: 0
   m_Name: point_4
   m_TagString: Untagged
@@ -9423,12 +9552,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1256979390}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: 12, z: 0}
+  m_LocalPosition: {x: -3, y: 12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1302454576}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1256979392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256979390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432c2b9a345e66e49b6e38070364c42d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityObjectCtrl: {fileID: 0}
+  laneId: -1
+  maxLane: 5
 --- !u!1 &1273404075
 GameObject:
   m_ObjectHideFlags: 0
@@ -9526,8 +9670,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipManagerCtrl: {fileID: 1900958932}
   timer: 0
-  delay: 2
-  limit: 2
+  delay: 0.5
+  limit: 1755
+  laneIndex: -1
 --- !u!1 &1277290207
 GameObject:
   m_ObjectHideFlags: 0
@@ -9800,6 +9945,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
+  laneId: -1
+  maxLane: 5
 --- !u!1 &1317725052
 GameObject:
   m_ObjectHideFlags: 0
@@ -10241,6 +10388,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
+  laneId: -1
+  maxLane: 5
 --- !u!1 &1345298077
 GameObject:
   m_ObjectHideFlags: 0
@@ -10336,6 +10485,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1355798157}
+  - component: {fileID: 1355798158}
   m_Layer: 0
   m_Name: point_5
   m_TagString: Untagged
@@ -10351,12 +10501,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1355798156}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: -12, z: 0}
+  m_LocalPosition: {x: 3, y: -12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 531043307}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1355798158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355798156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432c2b9a345e66e49b6e38070364c42d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityObjectCtrl: {fileID: 0}
+  laneId: -1
+  maxLane: 5
 --- !u!1 &1358783376
 GameObject:
   m_ObjectHideFlags: 0
@@ -11427,6 +11592,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
+  laneId: -1
+  maxLane: 5
 --- !u!1 &1489583402
 GameObject:
   m_ObjectHideFlags: 0
@@ -11613,6 +11780,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
+  laneId: -1
+  maxLane: 5
 --- !u!1 &1540067888
 GameObject:
   m_ObjectHideFlags: 0
@@ -12674,6 +12843,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
+  laneId: -1
+  maxLane: 5
 --- !u!1 &1682169980
 GameObject:
   m_ObjectHideFlags: 0
@@ -13522,11 +13693,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoints:
-  - {fileID: 1027967068}
-  - {fileID: 696893850}
-  - {fileID: 1995792717}
-  - {fileID: 1064179316}
-  - {fileID: 1355798157}
+  - {fileID: 1027967069}
+  - {fileID: 696893851}
+  - {fileID: 1995792718}
+  - {fileID: 1064179317}
+  - {fileID: 1355798158}
   standPoints:
   - {fileID: 1850781727}
   - {fileID: 792494438}
@@ -13637,6 +13808,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
+  laneId: -1
+  maxLane: 5
 --- !u!1 &1851417336
 GameObject:
   m_ObjectHideFlags: 0
@@ -14681,6 +14854,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1995792717}
+  - component: {fileID: 1995792718}
   m_Layer: 0
   m_Name: point_3
   m_TagString: Untagged
@@ -14696,12 +14870,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1995792716}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: -12, z: 0}
+  m_LocalPosition: {x: 1.5, y: -12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 531043307}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1995792718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995792716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432c2b9a345e66e49b6e38070364c42d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityObjectCtrl: {fileID: 0}
+  laneId: -1
+  maxLane: 5
 --- !u!1 &2001367706
 GameObject:
   m_ObjectHideFlags: 0
@@ -15307,6 +15496,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
+  laneId: -1
+  maxLane: 5
 --- !u!1 &2072302054
 GameObject:
   m_ObjectHideFlags: 0
