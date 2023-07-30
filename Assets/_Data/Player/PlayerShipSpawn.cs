@@ -32,6 +32,10 @@ public class PlayerShipSpawn : ShipManagerAbstact
         shipObj = PlayerShipsSpawner.Instance.Spawn(ShipCode.Miner);
         shipCtrl = shipObj.GetComponent<PlayerShipCtrl>();
         this.shipManagerCtrl.shipsManager.AddShip(shipCtrl);
+
+        shipObj = PlayerShipsSpawner.Instance.Spawn(ShipCode.Miner);
+        shipCtrl = shipObj.GetComponent<PlayerShipCtrl>();
+        this.shipManagerCtrl.shipsManager.AddShip(shipCtrl);
     }
 
     public virtual void SpawnShips()
