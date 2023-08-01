@@ -39,7 +39,12 @@ public class ShipLookForward : ObjLookAtTarget
         pos.z += this.loopPosition.z;
 
         this.lookTarget.position = pos;
-        this.lookTarget.parent = null;
+        this.lookTarget.parent = this.GetParent();
+    }
+
+    protected virtual Transform GetParent()
+    {
+        return null;
     }
 
     protected override void LootAtTarget()
