@@ -9754,8 +9754,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipManagerCtrl: {fileID: 1900958932}
   timer: 0
-  delay: 0.5
-  limit: 1755
+  delay: 2
+  limit: 0
   laneIndex: -1
 --- !u!1 &1277290207
 GameObject:

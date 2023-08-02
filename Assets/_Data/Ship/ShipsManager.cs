@@ -8,6 +8,7 @@ public class ShipsManager : SaiMonoBehaviour
 
     public virtual void AddShip(AbilityObjectCtrl ship)
     {
+        if (this.ships.Contains(ship)) return;
         this.ships.Add(ship);
     }
 }
