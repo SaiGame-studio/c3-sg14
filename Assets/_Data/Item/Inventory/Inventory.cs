@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Inventory : SaiMonoBehaviour
 {
-    [SerializeField] protected int maxSlot = 7;
+    [SerializeField] protected int maxSlot = 7777;
     [SerializeField] protected List<ItemInventory> items;
     public List<ItemInventory> Items => items;
 
@@ -62,7 +62,7 @@ public class Inventory : SaiMonoBehaviour
             newCount = itemExist.itemCount + addRemain;
 
             itemMaxStack = this.GetMaxStack(itemExist);
-            if (newCount > itemMaxStack)
+            if (itemMaxStack > 0 && newCount > itemMaxStack)
             {
                 addMore = itemMaxStack - itemExist.itemCount;
                 newCount = itemExist.itemCount + addMore;
@@ -121,6 +121,7 @@ public class Inventory : SaiMonoBehaviour
         if (itemInventory == null) return true;
 
         int maxStack = this.GetMaxStack(itemInventory);
+        if (maxStack < 1) return false;
         return itemInventory.itemCount >= maxStack;
     }
 

@@ -8,6 +8,7 @@ public class HPBarSpawner : Spawner
     public static HPBarSpawner Instance => instance;
 
     public static string HPBar = "HPBar";
+    public static string HPBarSmall = "HPBarSmall";
 
     protected override void Awake()
     {

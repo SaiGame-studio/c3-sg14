@@ -13,7 +13,7 @@ public class FollowTargetPlayer: FollowTarget
     protected virtual void LoadTarget()
     {
         if (this.target != null) return;
-        this.target = GameObject.Find("PlayerShipsManager").transform;
+        this.target = GameObject.Find("PlayerShipsCtrl").transform;
         Debug.LogWarning(transform.name + ": LoadTarget", gameObject);
     }
 }
