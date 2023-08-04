@@ -4,25 +4,10 @@ using UnityEngine;
 
 public class PlayerShipCtrl : AbilityObjectCtrl
 {
-    [Header("Ship")]
-    [SerializeField] protected Inventory inventory;
-    public Inventory Inventory => inventory;
+    //[Header("Ship")]
 
     protected override string GetObjectTypeString()
     {
         return ObjectType.Ship.ToString();
-    }
-
-    protected override void LoadComponents()
-    {
-        base.LoadComponents();
-        this.LoadInventory();
-    }
-
-    protected virtual void LoadInventory()
-    {
-        if (this.inventory != null) return;
-        this.inventory = transform.GetComponentInChildren<Inventory>();
-        Debug.Log(transform.name + ": LoadInventory", gameObject);
     }
 }

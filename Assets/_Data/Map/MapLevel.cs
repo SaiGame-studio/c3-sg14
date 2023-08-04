@@ -12,8 +12,6 @@ public class MapLevel : LevelByDistance
     protected virtual void MapSetTartet()
     {
         if (this.target != null) return;
-        if (PlayerCtrl.Instance.CurrentShip == null) return;
-        PlayerShipCtrl currentShip = PlayerCtrl.Instance.CurrentShip;
-        this.SetTarget(currentShip.transform);
+        this.SetTarget(PlayerShipsCtrl.Instance.transform);
     }
 }

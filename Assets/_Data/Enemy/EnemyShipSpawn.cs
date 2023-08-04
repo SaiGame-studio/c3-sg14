@@ -7,7 +7,7 @@ public class EnemyShipSpawn : ShipManagerAbstact
     [Header("Enemy Ship Spawn")]
     [SerializeField] protected float timer = 0;
     [SerializeField] protected float delay = 2f;
-    [SerializeField] protected int limit = 2;
+    [SerializeField] protected int limit = 0;
     [SerializeField] protected int laneIndex = -1;
 
     protected virtual void FixedUpdate()
@@ -19,9 +19,8 @@ public class EnemyShipSpawn : ShipManagerAbstact
     {
         this.timer += Time.fixedDeltaTime;
         if (this.timer < this.delay) return;
-        if (this.limit <= this.shipManagerCtrl.shipsManager.Ships.Count) return;
+        if (this.limit > 0 && this.limit <= this.shipManagerCtrl.shipsManager.Ships.Count) return;
         this.timer = 0;
-        Debug.Log("Spawning");
 
         ShipStandPos playerStandPos = this.GetPlayerStandPos();
         if (playerStandPos == null) return;
