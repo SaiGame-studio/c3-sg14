@@ -8,10 +8,13 @@ public class UIPlayerShipDetailCtrl : SaiMonoBehaviour
     private static UIPlayerShipDetailCtrl instance;
     public static UIPlayerShipDetailCtrl Instance { get => instance; }
 
+    public PlayerShipCtrl playerShipCtrl;
     public UIAppear uIAppear;
+    public UIShipAttributes uiShipAttributes;
 
     protected override void Awake()
     {
+        base.Awake();
         if (UIPlayerShipDetailCtrl.instance != null) Debug.LogError("Only 1 UIPlayerShipDetail allow to exist");
         UIPlayerShipDetailCtrl.instance = this;
     }
@@ -20,6 +23,7 @@ public class UIPlayerShipDetailCtrl : SaiMonoBehaviour
     {
         base.LoadComponents();
         this.LoadUIAppear();
+        this.LoadUIShipAttributes();
     }
 
     protected virtual void LoadUIAppear()
@@ -27,5 +31,17 @@ public class UIPlayerShipDetailCtrl : SaiMonoBehaviour
         if (this.uIAppear != null) return;
         this.uIAppear = GetComponent<UIAppear>();
         Debug.LogWarning(transform.name + ": LoadUIAppear", gameObject);
+    }
+
+    protected virtual void LoadUIShipAttributes()
+    {
+        if (this.uiShipAttributes != null) return;
+        this.uiShipAttributes = GetComponentInChildren<UIShipAttributes>();
+        Debug.LogWarning(transform.name + ": LoadUIShipAttributes", gameObject);
+    }
+
+    public virtual void SetPlayerShipCtrl(PlayerShipCtrl playerShipCtrl)
+    {
+        this.playerShipCtrl = playerShipCtrl;
     }
 }

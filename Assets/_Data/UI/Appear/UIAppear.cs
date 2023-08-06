@@ -25,7 +25,6 @@ public class UIAppear : SaiMonoBehaviour
         this.SetStartPos();
         this.show = true;
         transform.gameObject.SetActive(true);
-
     }
 
     public virtual void Hide()
