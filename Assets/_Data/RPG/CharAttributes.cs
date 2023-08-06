@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharAttributes : SaiMonoBehaviour
 {
-    [SerializeField] protected int maxPoint = 7;
+    [SerializeField] protected int maxPoint = 700;
     public int MaxPoint => maxPoint;
 
     [SerializeField] protected int currentPoint = 0;
@@ -21,9 +21,11 @@ public class CharAttributes : SaiMonoBehaviour
 
     protected virtual void Test()
     {
-        this.Add(AttributeType.strength, 4);
-        this.Add(AttributeType.luck, 3);
-        this.Deduct(AttributeType.strength, 1);
+        this.Add(AttributeType.strength, Random.Range(0,9));
+        this.Add(AttributeType.dexterity, Random.Range(0,9));
+        this.Add(AttributeType.intelligence, Random.Range(0,9));
+        this.Add(AttributeType.constitution, Random.Range(0,9));
+        this.Add(AttributeType.luck, Random.Range(0, 9));
     }
 
     protected override void LoadComponents()

@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _collider: {fileID: 737110674}
+  playerShipCtrl: {fileID: 0}
 --- !u!65 &737110674
 BoxCollider:
   m_ObjectHideFlags: 0
