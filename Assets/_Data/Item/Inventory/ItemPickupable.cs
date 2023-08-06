@@ -25,7 +25,7 @@ public class ItemPickupable : ItemAbstract
     public virtual void OnMouseDown()
     {
         //Debug.Log(transform.parent.name);
-        PlayerCtrl.Instance.PlayerPickup.ItemPickup(this);
+        //PlayerCtrl.Instance.PlayerPickup.ItemPickup(this);
     }
 
     protected override void LoadComponents()

@@ -8,6 +8,6 @@ public class PressableAbility: Pressable
 
     public override void Pressed()
     {
-        PlayerCtrl.Instance.PlayerAbility.Active(ability);
+        //PlayerCtrl.Instance.PlayerAbility.Active(ability);
     }
 }
