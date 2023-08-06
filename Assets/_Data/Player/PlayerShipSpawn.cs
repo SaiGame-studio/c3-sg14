@@ -21,19 +21,19 @@ public class PlayerShipSpawn : ShipManagerAbstact
         shipCtrl = shipObj.GetComponent<PlayerShipCtrl>();
         this.shipManagerCtrl.shipsManager.AddShip(shipCtrl);
 
-        shipObj = PlayerShipsSpawner.Instance.Spawn(ShipCode.Healer);
+        shipObj = PlayerShipsSpawner.Instance.Spawn(ShipCode.Fighter);
         shipCtrl = shipObj.GetComponent<PlayerShipCtrl>();
         this.shipManagerCtrl.shipsManager.AddShip(shipCtrl);
 
-        shipObj = PlayerShipsSpawner.Instance.Spawn(ShipCode.Tanker);
+        shipObj = PlayerShipsSpawner.Instance.Spawn(ShipCode.Fighter);
         shipCtrl = shipObj.GetComponent<PlayerShipCtrl>();
         this.shipManagerCtrl.shipsManager.AddShip(shipCtrl);
 
-        shipObj = PlayerShipsSpawner.Instance.Spawn(ShipCode.Miner);
+        shipObj = PlayerShipsSpawner.Instance.Spawn(ShipCode.Fighter);
         shipCtrl = shipObj.GetComponent<PlayerShipCtrl>();
         this.shipManagerCtrl.shipsManager.AddShip(shipCtrl);
 
-        shipObj = PlayerShipsSpawner.Instance.Spawn(ShipCode.Miner);
+        shipObj = PlayerShipsSpawner.Instance.Spawn(ShipCode.Fighter);
         shipCtrl = shipObj.GetComponent<PlayerShipCtrl>();
         this.shipManagerCtrl.shipsManager.AddShip(shipCtrl);
     }
