@@ -4,7 +4,7 @@ public class Level : SaiMonoBehaviour
 {
     [Header("Level")]
     [SerializeField] protected int levelCurrent = 0;
-    [SerializeField] protected int levelMax = 99;
+    [SerializeField] protected int levelMax = 1000;
     public int LevelCurrent => levelCurrent;
     public int LevelMax => levelMax;
 
@@ -14,7 +14,7 @@ public class Level : SaiMonoBehaviour
         this.LimitLevel();
     }
 
-    public virtual void LevelSet(int newLevel)
+    public virtual void SetLevel(int newLevel)
     {
         this.levelCurrent = newLevel;
         this.LimitLevel();

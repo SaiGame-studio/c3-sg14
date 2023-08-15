@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class UIShipAttribute : SaiMonoBehaviour
 {
-    [SerializeField] protected Attribute attribute;
+    public Attribute attribute;
     [SerializeField] protected TextMeshProUGUI txtAttribute;
     
 
