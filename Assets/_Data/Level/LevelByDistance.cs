@@ -22,7 +22,7 @@ public class LevelByDistance : Level
         if (this.target == null) return;
         this.distance = Vector3.Distance(transform.position, target.position);
         int newLevel = this.GetLevelByDis();
-        this.LevelSet(newLevel);
+        this.SetLevel(newLevel);
     }
 
     protected virtual int GetLevelByDis()
