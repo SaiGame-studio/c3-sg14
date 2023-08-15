@@ -36,7 +36,6 @@ public class ItemLooter : InventoryAbstract
 
     protected virtual void OnTriggerEnter(Collider collider)
     {
-
         ItemPickupable itemPickupable = collider.GetComponent<ItemPickupable>();
         if (itemPickupable == null) return;
 

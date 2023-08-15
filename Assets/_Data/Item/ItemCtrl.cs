@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class ItemCtrl : SaiMonoBehaviour
 {
+    [Header("Item")]
     [SerializeField] protected ItemDespawn itemDespawn;
     public ItemDespawn ItemDespawn => itemDespawn;
 
