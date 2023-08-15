@@ -2,15 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MapCtrl : SaiMonoBehaviour
+public class MapCtrl : Singleton<MapCtrl>
 {
-    private static MapCtrl instance;
-    public static MapCtrl Instance => instance;
+    [SerializeField] protected MapLevel mapLevel;
+    public MapLevel MapLevel => mapLevel;
 
-    protected override void Awake()
+    protected override void LoadComponents()
     {
-        base.Awake();
-        if (MapCtrl.instance != null) Debug.LogError("Only 1 MapManager allow to exist");
-        MapCtrl.instance = this;
+        base.LoadComponents();
+        this.LoadMapLevel();
+    }
+
+    protected virtual void LoadMapLevel()
+    {
+        if (this.mapLevel != null) return;
+        this.mapLevel = GetComponentInChildren<MapLevel>();
+        Debug.Log(transform.name + ": LoadMapLevel", gameObject);
     }
 }

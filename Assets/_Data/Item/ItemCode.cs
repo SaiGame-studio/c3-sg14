@@ -8,6 +8,8 @@ public enum ItemCode
     IronOre = 1,
     GoldOre = 2,
     
+    Gold = 100,
+
     CopperSword = 1000,
 }
 

@@ -52,5 +52,4 @@ public class ItemPickupable : ItemAbstract
     {
         this.itemCtrl.ItemDespawn.DespawnObject();
     }
-
 }

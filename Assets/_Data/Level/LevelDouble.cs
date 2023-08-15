@@ -11,11 +11,7 @@ public class LevelDouble : Level
     [SerializeField] protected double number = 0;
     [SerializeField] protected float numberMulti = 1f;
 
-
-    public virtual double Number()
-    {
-        return this.number;
-    }
+    public double Number => number;
 
     public virtual double NumberByLevel()
     {

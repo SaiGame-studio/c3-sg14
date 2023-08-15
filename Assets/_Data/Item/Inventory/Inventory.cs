@@ -7,18 +7,10 @@ public class Inventory : SaiMonoBehaviour
     [SerializeField] protected List<ItemInventory> items;
     public List<ItemInventory> Items => items;
 
-    protected override void Start()
-    {
-        base.Start();
-        //this.AddItem(ItemCode.CopperSword, 1);
-        //this.AddItem(ItemCode.GoldOre, 10);
-        //this.AddItem(ItemCode.IronOre, 10);
-        //this.AddItem(ItemCode.CopperSword, 1);
-        //this.AddItem(ItemCode.IronOre, 10);
-    }
-
     public virtual bool AddItem(ItemInventory itemInventory)
     {
+        if (itemInventory.itemProfile.canNotSendToInventory) return true;
+
         int addCount = itemInventory.itemCount;
         ItemProfileSO itemProfile = itemInventory.itemProfile;
         ItemCode itemCode = itemProfile.itemCode;
