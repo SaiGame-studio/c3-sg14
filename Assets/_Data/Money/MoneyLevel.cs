@@ -8,6 +8,12 @@ public class MoneyLevel : LevelDouble
         this.LoadLevelFromMap();
     }
 
+    protected override void ResetValue()
+    {
+        base.ResetValue();
+
+    }
+
     protected virtual void LoadLevelFromMap()
     {
         int level = MapCtrl.Instance.MapLevel.LevelCurrent;
