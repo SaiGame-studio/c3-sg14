@@ -21,8 +21,6 @@ public class UIPlayerShipOnMouseClick : BaseOnMouseClick
 
     protected override void OnMouseClickDown()
     {
-        Debug.Log("OnMouseClickDown");
-
         UIPlayerShipDetailCtrl.Instance.SetPlayerShipCtrl(this.playerShipCtrl);
         UIPlayerShipDetailCtrl.Instance.uIAppear.Appear();
         UIPlayerShipDetailCtrl.Instance.uiShipAttributes.ShowAttributes();

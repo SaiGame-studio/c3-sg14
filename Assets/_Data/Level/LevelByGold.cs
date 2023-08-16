@@ -13,12 +13,11 @@ public class LevelByGold : LevelDouble
 
     protected virtual void TestLevel()
     {
-        this.SetLevel(Random.Range(10,100));
-        this.GetGoldRequire();
+        this.SetLevel(Random.Range(1,10));
     }
 
-    protected virtual void GetGoldRequire()
+    public virtual double GetGoldRequire()
     {
-
+        return this.number;
     }
 }

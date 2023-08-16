@@ -6,11 +6,13 @@ public class PlayerShipCtrl : AbilityObjectCtrl
 {
     [Header("Ship")]
     public CharAttributes charAttributes;
+    public LevelByGold levelByGold;
 
     protected override void LoadComponents()
     {
         base.LoadComponents();
         this.LoadCharAttributes();
+        this.LoadLevelByGold();
     }
 
     protected override string GetObjectTypeString()
@@ -23,5 +25,12 @@ public class PlayerShipCtrl : AbilityObjectCtrl
         if (this.charAttributes != null) return;
         this.charAttributes = GetComponentInChildren<CharAttributes>();
         Debug.LogWarning(transform.name + ": LoadCharAttributes", gameObject);
+    }
+
+    protected virtual void LoadLevelByGold()
+    {
+        if (this.levelByGold != null) return;
+        this.levelByGold = GetComponentInChildren<LevelByGold>();
+        Debug.LogWarning(transform.name + ": LoadLevelByGold", gameObject);
     }
 }

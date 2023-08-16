@@ -18,5 +18,4 @@ public abstract class BaseText : SaiMonoBehaviour
         this.text = GetComponent<TextMeshProUGUI>();
         Debug.LogWarning(transform.name + ": LoadText", gameObject);
     }
-
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharAttributes : SaiMonoBehaviour
 {
-    [SerializeField] protected int maxPoint = 700;
+    [SerializeField] protected int maxPoint = 70;
     public int MaxPoint => maxPoint;
 
     [SerializeField] protected int currentPoint = 0;
@@ -73,5 +73,10 @@ public class CharAttributes : SaiMonoBehaviour
         attr.value -= deduct;
         this.currentPoint -= deduct;
         if (attr.value < 0) attr.value = 0;
+    }
+
+    public virtual int RemainPoints()
+    {
+        return this.maxPoint - this.currentPoint;
     }
 }
