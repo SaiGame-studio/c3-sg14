@@ -25,7 +25,7 @@ public class BtnAttributeAdd : BaseButton
     {
         if (this.uiPlayerShipDetailCtrl != null) return;
         this.uiPlayerShipDetailCtrl = transform.parent.parent.parent.GetComponent<UIPlayerShipDetailCtrl>();
-        Debug.LogWarning(transform.name + ": LoadUIShipAttributes", gameObject);
+        Debug.LogWarning(transform.name + ": UIPlayerShipDetailCtrl", gameObject);
     }
 
     protected override void OnClick()
