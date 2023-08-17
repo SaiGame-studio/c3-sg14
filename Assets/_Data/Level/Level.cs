@@ -8,21 +8,21 @@ public class Level : SaiMonoBehaviour
     public int LevelCurrent => levelCurrent;
     public int LevelMax => levelMax;
 
-    public virtual void LevelUp()
+    public virtual bool LevelUp()
     {
+        int newLevel = this.levelCurrent + 1;
+        if (newLevel > this.levelMax) return false;
+
         this.levelCurrent += 1;
-        this.LimitLevel();
+        return true;
     }
 
-    public virtual void SetLevel(int newLevel)
+    public virtual bool SetLevel(int newLevel)
     {
+        if (newLevel > this.levelMax) return false;
+        if (newLevel < 1) return false;
+
         this.levelCurrent = newLevel;
-        this.LimitLevel();
-    }
-
-    protected virtual void LimitLevel()
-    {
-        if (this.levelCurrent > this.levelMax) this.levelCurrent = this.levelMax;
-        if (this.levelCurrent < 1) this.levelCurrent = 1;
+        return true;
     }
 }

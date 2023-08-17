@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class CharAttributes : SaiMonoBehaviour
 {
-    [SerializeField] protected int maxPoint = 70;
-    public int MaxPoint => maxPoint;
+    [SerializeField] protected int defaultPoints = 7;
+    public int DefaultPoints => defaultPoints;
+
+    [SerializeField] protected int levelPoints = 0;
+    public int LevelPoints => levelPoints;
 
     [SerializeField] protected int currentPoint = 0;
     public int CurrentPoint => currentPoint;
@@ -16,16 +19,16 @@ public class CharAttributes : SaiMonoBehaviour
     protected override void Start()
     {
         base.Start();
-        Invoke("Test", 3);
+        Invoke("Test", 1);
     }
 
     protected virtual void Test()
     {
-        this.Add(AttributeType.strength, Random.Range(0,9));
-        this.Add(AttributeType.dexterity, Random.Range(0,9));
-        this.Add(AttributeType.intelligence, Random.Range(0,9));
-        this.Add(AttributeType.constitution, Random.Range(0,9));
-        this.Add(AttributeType.luck, Random.Range(0, 9));
+        this.Add(AttributeType.strength, Random.Range(1,3));
+        this.Add(AttributeType.dexterity, Random.Range(1,3));
+        this.Add(AttributeType.intelligence, Random.Range(1,3));
+        this.Add(AttributeType.constitution, Random.Range(1,3));
+        this.Add(AttributeType.luck, Random.Range(1,3));
     }
 
     protected override void LoadComponents()
@@ -58,7 +61,7 @@ public class CharAttributes : SaiMonoBehaviour
     public virtual bool Add(AttributeType type, int add)
     {
         int newCurrentPoint = this.currentPoint + add;
-        if (newCurrentPoint > this.maxPoint) return false;
+        if (newCurrentPoint > this.MaxPoints()) return false;
 
         this.currentPoint = newCurrentPoint;
         Attribute attr = this.Get(type);
@@ -77,6 +80,16 @@ public class CharAttributes : SaiMonoBehaviour
 
     public virtual int RemainPoints()
     {
-        return this.maxPoint - this.currentPoint;
+        return this.MaxPoints() - this.currentPoint;
+    }
+
+    public virtual int MaxPoints()
+    {
+        return this.levelPoints + this.defaultPoints;
+    }
+
+    public virtual void SetLevelPonits(int levelPoints)
+    {
+        this.levelPoints = levelPoints;
     }
 }

@@ -13,6 +13,12 @@ public class LevelDouble : Level
 
     public double Number => number;
 
+    protected override void ResetValue()
+    {
+        base.ResetValue();
+        this.SetLevel(1);
+    }
+
     public virtual double NumberByLevel()
     {
 
@@ -29,9 +35,17 @@ public class LevelDouble : Level
         return this.NumberByLevel();
     }
 
-    public override void SetLevel(int level)
+    public override bool SetLevel(int level)
     {
-        base.SetLevel(level);
+        bool status = base.SetLevel(level);
         this.NumberByLevel();
+        return status;
+    }
+
+    public override bool LevelUp()
+    {
+        bool status = base.LevelUp();
+        this.NumberByLevel();
+        return status;
     }
 }

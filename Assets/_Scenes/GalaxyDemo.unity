@@ -570,7 +570,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2047164430}
   m_HandleRect: {fileID: 2047164429}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -15826,8 +15826,9 @@ GameObject:
   - component: {fileID: 1885171991}
   - component: {fileID: 1885171990}
   - component: {fileID: 1885171989}
+  - component: {fileID: 1885171988}
   m_Layer: 5
-  m_Name: BtnAddLevel
+  m_Name: BtnLevelUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15853,6 +15854,20 @@ RectTransform:
   m_AnchoredPosition: {x: 180, y: 0}
   m_SizeDelta: {x: 70, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1885171988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885171986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e2d38263dd3cd45af4dc54d8793e1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1885171989}
+  uiPlayerShipDetailCtrl: {fileID: 1939105396}
 --- !u!114 &1885171989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17785,6 +17800,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1645776044}
     m_Modifications:
+    - target: {fileID: 1648441648442899394, guid: 9aff6b206b3b58c4184a6dabb61c69b4, type: 3}
+      propertyPath: level
+      value: 
+      objectReference: {fileID: 840274883}
     - target: {fileID: 2923840638498529304, guid: 9aff6b206b3b58c4184a6dabb61c69b4, type: 3}
       propertyPath: m_Name
       value: CharAttributes
@@ -17832,22 +17851,6 @@ PrefabInstance:
     - target: {fileID: 2923840638498529305, guid: 9aff6b206b3b58c4184a6dabb61c69b4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2923840638498529306, guid: 9aff6b206b3b58c4184a6dabb61c69b4, type: 3}
-      propertyPath: maxPoint
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 2923840638498529306, guid: 9aff6b206b3b58c4184a6dabb61c69b4, type: 3}
-      propertyPath: attributes.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2923840638498529306, guid: 9aff6b206b3b58c4184a6dabb61c69b4, type: 3}
-      propertyPath: attributes.Array.data[4].type
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2923840638498529306, guid: 9aff6b206b3b58c4184a6dabb61c69b4, type: 3}
-      propertyPath: attributes.Array.data[5].type
-      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9aff6b206b3b58c4184a6dabb61c69b4, type: 3}
@@ -18987,6 +18990,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1645776044}
     m_Modifications:
+    - target: {fileID: 7112597226112917476, guid: 68116c20dfc97374bb6117ac87a66758, type: 3}
+      propertyPath: levelCurrent
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7112597226112917477, guid: 68116c20dfc97374bb6117ac87a66758, type: 3}
       propertyPath: m_RootOrder
       value: 7
