@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class ObjShooting : SaiMonoBehaviour
 {
     [SerializeField] protected bool isShooting = false;
-    [SerializeField] protected float shootDelay = 0.2f;
+    [SerializeField] protected float shootDelay = 1f;
     [SerializeField] protected float shootTimer = 0f;
 
     void Update()
@@ -34,6 +34,11 @@ public abstract class ObjShooting : SaiMonoBehaviour
         newBullet.gameObject.SetActive(true);
         BulletCtrl bulletCtrl = newBullet.GetComponent<BulletCtrl>();
         bulletCtrl.SetShotter(transform.parent);
+    }
+
+    public virtual void SetDelay(float delay)
+    {
+        this.shootDelay = delay;
     }
 
     protected abstract bool IsShooting();

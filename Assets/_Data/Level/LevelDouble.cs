@@ -4,7 +4,7 @@ public class LevelDouble : Level
 {
 
     [Header("Double")]
-    [SerializeField] protected double baseNumber = 10;
+    public double baseNumber = 10;
     [SerializeField] protected double baseMin = 1.3;
     [SerializeField] protected double baseMax = 1.0712;
     [SerializeField] protected double baseLimit = 100;
