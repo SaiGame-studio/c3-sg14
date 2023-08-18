@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AbilityWarp : BaseAbility
+public class AbilityWarp : ActiveAbility
 {
     [Header("Warp")]
     [SerializeField] protected Spawner spawner;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AbilitySummon: BaseAbility
+public class AbilitySummon: ActiveAbility
 {
     [Header("Ability Summon")]
     [SerializeField] protected Spawner spawner;
