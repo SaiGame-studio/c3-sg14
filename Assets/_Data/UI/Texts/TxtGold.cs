@@ -12,7 +12,8 @@ public class TxtGold : BaseText
     protected virtual void GoldShowing()
     {
         double gold = MoneyManager.Instance.Gold;
-        string goldText = $"Gold: {gold}";
+        string goldNumber = LargeNumber.ToString(gold);
+        string goldText = $"Gold: {goldNumber}";
         this.text.text = goldText;
     }
 }
