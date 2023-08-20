@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class SliderHp : BaseSlider
 {
     [Header("HP")]
-    [SerializeField] protected float maxHP = 100;
-    [SerializeField] protected float currentHP = 70;
+    [SerializeField] protected double maxHP = 100;
+    [SerializeField] protected double currentHP = 70;
 
     protected override void FixedUpdate()
     {
@@ -16,8 +16,8 @@ public class SliderHp : BaseSlider
 
     protected virtual void HPShowing()
     {
-        float hpPercent = this.currentHP / this.maxHP;
-        this.slider.value = hpPercent;
+        double hpPercent = this.currentHP / this.maxHP;
+        this.slider.value = (float) hpPercent;
     }
 
     protected override void OnChanged(float newValue)
@@ -25,12 +25,12 @@ public class SliderHp : BaseSlider
         //Debug.Log("newValue: " + newValue);
     }
 
-    public virtual void SetMaxHp(float maxHP)
+    public virtual void SetMaxHp(double maxHP)
     {
         this.maxHP = maxHP;
     }
 
-    public virtual void SetCurrentHp(float currentHP)
+    public virtual void SetCurrentHp(double currentHP)
     {
         this.currentHP = currentHP;
     }

@@ -71,7 +71,7 @@ public class AbilityShootPower : PassiveAbility
     protected virtual void UpdateShootPower()
     {
         this.damage = this.GetDamage();
-        //this.shipAutoShoot.SetDelay(this.delay);
+        this.shipAutoShoot.SetDamage(this.damage);
     }
 
     protected virtual double GetDamage()
