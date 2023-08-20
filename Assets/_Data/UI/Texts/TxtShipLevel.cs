@@ -31,6 +31,7 @@ public class TxtShipLevel : BaseText
         LevelByGold levelByGold = playerShipCtrl.levelByGold;
         int level = levelByGold.LevelCurrent;
         double goldRequire = levelByGold.GetGoldRequire();
-        this.text.text = $"Level: {level} / {goldRequire}";
+        string goldRequireNumber = LargeNumber.ToString(goldRequire);
+        this.text.text = $"Level: {level} / {goldRequireNumber}";
     }
 }

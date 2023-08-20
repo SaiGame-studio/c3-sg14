@@ -9,6 +9,7 @@ public class FXSpawner : Spawner
 
     public static string smoke1 = "Smoke_1";
     public static string impact1 = "Impact_1";
+    public static string textDamage = "TextDamage";
 
     protected override void Awake()
     {

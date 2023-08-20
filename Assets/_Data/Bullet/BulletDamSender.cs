@@ -22,7 +22,39 @@ public class BulletDamSender : DamageSender
     public override void Send(DamageReceiver damageReceiver)
     {
         base.Send(damageReceiver);
+
+        Vector3 hitPos = transform.position;
+        Quaternion hitRot = transform.rotation;
+
+        this.CreateImpactFX(hitPos, hitRot);
+        this.CreateTextDamageFX(hitPos);
         this.DestroyBullet();
+    }
+
+    protected virtual void CreateImpactFX(Vector3 hitPos, Quaternion hitRot)
+    {
+        string fxName = this.GetImpactFX();
+        Transform fxImpact = FXSpawner.Instance.Spawn(fxName, hitPos, hitRot);
+        fxImpact.gameObject.SetActive(true);
+    }
+
+    protected virtual string GetImpactFX()
+    {
+        return FXSpawner.impact1;
+    }
+
+    protected virtual void CreateTextDamageFX(Vector3 hitPos)
+    {
+        string fxName = this.GetTextDamageFX();
+        Transform fxObj = FXSpawner.Instance.Spawn(fxName, hitPos, Quaternion.identity);
+        TextDamage textDamage = fxObj.GetComponent<TextDamage>();
+        textDamage.SetDamage(this.damage);
+        fxObj.gameObject.SetActive(true);
+    }
+
+    protected virtual string GetTextDamageFX()
+    {
+        return FXSpawner.textDamage;
     }
 
     protected virtual void DestroyBullet()
