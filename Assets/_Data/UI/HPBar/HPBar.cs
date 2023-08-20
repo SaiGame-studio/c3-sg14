@@ -55,8 +55,8 @@ public class HPBar : SaiMonoBehaviour
             return;
         }
 
-        float hp = this.shootableObjectCtrl.DamageReceiver.HP;
-        float maxHp = this.shootableObjectCtrl.DamageReceiver.HPMax;
+        double hp = this.shootableObjectCtrl.DamageReceiver.HP;
+        double maxHp = this.shootableObjectCtrl.DamageReceiver.HPMax;
 
         this.sliderHp.SetCurrentHp(hp);
         this.sliderHp.SetMaxHp(maxHp);

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ShipAutoShoot : ObjShooting
 {
-    [SerializeField] protected double damage = 1;
 
     protected override bool IsShooting()
     {
@@ -12,8 +11,4 @@ public class ShipAutoShoot : ObjShooting
         return this.isShooting;
     }
 
-    public virtual void SetDamage(double damage)
-    {
-        this.damage = damage;
-    }
 }

@@ -4,9 +4,11 @@ using UnityEngine;
 
 public abstract class ObjShooting : SaiMonoBehaviour
 {
+    [Header("Obj Shooting")]
     [SerializeField] protected bool isShooting = false;
     [SerializeField] protected float shootDelay = 1f;
     [SerializeField] protected float shootTimer = 0f;
+    [SerializeField] protected double damage = 1;
 
     void Update()
     {
@@ -33,7 +35,13 @@ public abstract class ObjShooting : SaiMonoBehaviour
 
         newBullet.gameObject.SetActive(true);
         BulletCtrl bulletCtrl = newBullet.GetComponent<BulletCtrl>();
+        bulletCtrl.DamageSender.SetDamage(this.damage);
         bulletCtrl.SetShotter(transform.parent);
+    }
+
+    public virtual void SetDamage(double damage)
+    {
+        this.damage = damage;
     }
 
     public virtual void SetDelay(float delay)

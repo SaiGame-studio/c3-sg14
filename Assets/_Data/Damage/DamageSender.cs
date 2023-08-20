@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DamageSender : SaiMonoBehaviour
 {
-    [SerializeField] protected int damage = 1;
+    [SerializeField] protected double damage = 1;
 
     public virtual void Send(Transform obj)
     {
@@ -30,5 +30,10 @@ public class DamageSender : SaiMonoBehaviour
     protected virtual string GetImpactFX()
     {
         return FXSpawner.impact1;
+    }
+
+    public virtual void SetDamage(double damage)
+    {
+        this.damage = damage;
     }
 }
