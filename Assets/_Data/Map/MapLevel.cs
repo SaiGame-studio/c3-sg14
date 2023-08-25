@@ -1,17 +1,24 @@
+using UnityEngine;
 
-public class MapLevel : LevelByDistance
+public class MapLevel : Level
 {
-    //[Header("Map")]
+    [Header("Map")]
+    public int killCount = 0;
+    public int killPerLevel = 16;
 
-    protected override void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
-        base.FixedUpdate();
-        this.MapSetTartet();
+        this.Leveling();
     }
 
-    protected virtual void MapSetTartet()
+    protected virtual void Leveling()
     {
-        if (this.target != null) return;
-        this.SetTarget(PlayerShipsCtrl.Instance.transform);
+        int newLevel = Mathf.FloorToInt(this.killCount / this.killPerLevel) + 1;
+        this.SetLevel(newLevel);
+    }
+
+    public virtual void Kill()
+    {
+        this.killCount++;
     }
 }

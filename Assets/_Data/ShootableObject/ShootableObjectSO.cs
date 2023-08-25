@@ -6,6 +6,6 @@ public class ShootableObjectSO : ScriptableObject
 {
     public string objName = "Shootable Object";
     public ObjectType objType;
-    public int hpMax = 2;
+    public double hpMax = 2;
     public List<ItemDropRate> dropList;
 }
