@@ -24,11 +24,11 @@ public class CharAttributes : SaiMonoBehaviour
 
     protected virtual void Test()
     {
-        this.Add(AttributeType.strength, Random.Range(1,3));
-        this.Add(AttributeType.dexterity, Random.Range(1,3));
-        this.Add(AttributeType.intelligence, Random.Range(1,3));
-        this.Add(AttributeType.constitution, Random.Range(1,3));
-        this.Add(AttributeType.luck, Random.Range(1,3));
+        //this.Add(AttributeType.strength, Random.Range(1,3));
+        //this.Add(AttributeType.dexterity, Random.Range(1,3));
+        //this.Add(AttributeType.intelligence, Random.Range(1,3));
+        //this.Add(AttributeType.constitution, Random.Range(1,3));
+        //this.Add(AttributeType.luck, Random.Range(1,3));
     }
 
     protected override void LoadComponents()
