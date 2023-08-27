@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyShipSpawn : ShipManagerAbstact
+public class EnemySpawning : EnemyShipsAbstact
 {
     [Header("Enemy Ship Spawn")]
     [SerializeField] protected float timer = 0;
@@ -96,5 +96,12 @@ public class EnemyShipSpawn : ShipManagerAbstact
     protected virtual string GetEnemyName()
     {
         return "Enemy_1";
+    }
+
+    public override int Killed()
+    {
+        base.Killed();
+        this.enemyShipsCtrl.bossSpawning.EnemyKilled();
+        return this.killCount;
     }
 }

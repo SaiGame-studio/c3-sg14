@@ -2,9 +2,7 @@ using UnityEngine;
 
 public class MapLevel : Level
 {
-    [Header("Map")]
-    public int killCount = 0;
-    public int killPerLevel = 16;
+    //[Header("Map")]
 
     protected virtual void FixedUpdate()
     {
@@ -13,12 +11,7 @@ public class MapLevel : Level
 
     protected virtual void Leveling()
     {
-        int newLevel = Mathf.FloorToInt(this.killCount / this.killPerLevel) + 1;
-        this.SetLevel(newLevel);
-    }
-
-    public virtual void Kill()
-    {
-        this.killCount++;
+        int bossKillCount = EnemyShipsCtrl.Instance.bossSpawning.KillCount();
+        this.SetLevel(bossKillCount + 1);
     }
 }

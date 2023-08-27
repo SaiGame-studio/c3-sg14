@@ -26,5 +26,4 @@ public abstract class ShipManagerCtrl : SaiMonoBehaviour
         this.shipsManager = transform.GetComponentInChildren<ShipsManager>();
         Debug.LogWarning(transform.name + ": LoadShipsManager", gameObject);
     }
-
 }
