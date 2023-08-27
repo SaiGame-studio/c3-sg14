@@ -241,7 +241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
   laneId: -1
-  maxLane: 5
+  shipPerRow: 5
 --- !u!1001 &13917173
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -467,7 +467,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 43325182}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 9.14, z: 0}
+  m_LocalPosition: {x: 3, y: 9.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1302454576}
@@ -487,7 +487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
   laneId: -1
-  maxLane: 5
+  shipPerRow: 5
 --- !u!1 &56946813
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,8 +570,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2047164430}
   m_HandleRect: {fileID: 2047164429}
   m_Direction: 0
-  m_Value: 1
-  m_Size: 0.99999994
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -763,7 +763,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
   laneId: -1
-  maxLane: 5
+  shipPerRow: 5
 --- !u!1 &107595745
 GameObject:
   m_ObjectHideFlags: 0
@@ -1118,7 +1118,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 141459881}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8badb09b3dc4a3b43ab270c4b4d884d6, type: 3}
   m_Name: 
@@ -1319,7 +1319,7 @@ MonoBehaviour:
   damage: 1
   target: {fileID: 1645776044}
   distance: Infinity
-  shootDistance: 3
+  shootDistance: 1
 --- !u!4 &156666336
 Transform:
   m_ObjectHideFlags: 0
@@ -1581,7 +1581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
   laneId: -1
-  maxLane: 5
+  shipPerRow: 5
 --- !u!1 &203141446
 GameObject:
   m_ObjectHideFlags: 0
@@ -2712,7 +2712,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 287968083}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a08715b65369ec94499e21496414d00f, type: 3}
+  m_Script: {fileID: 11500000, guid: bffa4e09f60edf542bdc9eddf7675318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   holder: {fileID: 1800489574}
@@ -2732,7 +2732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33263b05cb1b601458b6cb5bcee8a47d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawner: {fileID: 287968085}
+  spawner: {fileID: 0}
   spawnPoints: {fileID: 1028662658}
 --- !u!1 &317918157
 GameObject:
@@ -3828,7 +3828,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 453173535}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5, y: 9.14, z: 0}
+  m_LocalPosition: {x: 1.5, y: 9.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1302454576}
@@ -3848,7 +3848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
   laneId: -1
-  maxLane: 5
+  shipPerRow: 5
 --- !u!1 &460684918
 GameObject:
   m_ObjectHideFlags: 0
@@ -3981,6 +3981,14 @@ PrefabInstance:
     - target: {fileID: 8296551412749270187, guid: b183358eb1172504b8bd75ecbcb5819a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296551412749270188, guid: b183358eb1172504b8bd75ecbcb5819a, type: 3}
+      propertyPath: speed
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296551412749270188, guid: b183358eb1172504b8bd75ecbcb5819a, type: 3}
+      propertyPath: minDistance
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b183358eb1172504b8bd75ecbcb5819a, type: 3}
@@ -4666,7 +4674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
   laneId: -1
-  maxLane: 5
+  shipPerRow: 5
 --- !u!1 &606454224
 GameObject:
   m_ObjectHideFlags: 0
@@ -5728,7 +5736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
   laneId: -1
-  maxLane: 5
+  shipPerRow: 5
 --- !u!1 &702542432
 GameObject:
   m_ObjectHideFlags: 0
@@ -5976,7 +5984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
   laneId: -1
-  maxLane: 5
+  shipPerRow: 5
 --- !u!1 &736554685
 GameObject:
   m_ObjectHideFlags: 0
@@ -6350,7 +6358,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 758028437}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5, y: 9.14, z: 0}
+  m_LocalPosition: {x: -1.5, y: 9.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1302454576}
@@ -6370,7 +6378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
   laneId: -1
-  maxLane: 5
+  shipPerRow: 5
 --- !u!1001 &762295114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6758,7 +6766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
   laneId: -1
-  maxLane: 5
+  shipPerRow: 5
 --- !u!1 &794288852
 GameObject:
   m_ObjectHideFlags: 0
@@ -7475,7 +7483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
   laneId: -1
-  maxLane: 5
+  shipPerRow: 5
 --- !u!1 &878508520
 GameObject:
   m_ObjectHideFlags: 0
@@ -7837,7 +7845,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
   laneId: -1
-  maxLane: 5
+  shipPerRow: 5
 --- !u!1001 &926613060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8844,7 +8852,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
   laneId: -1
-  maxLane: 5
+  shipPerRow: 5
 --- !u!1 &1028662657
 GameObject:
   m_ObjectHideFlags: 0
@@ -9205,7 +9213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
   laneId: -1
-  maxLane: 5
+  shipPerRow: 5
 --- !u!1 &1069267486
 GameObject:
   m_ObjectHideFlags: 0
@@ -9302,7 +9310,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1090729735}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
@@ -9310,7 +9318,7 @@ Transform:
   - {fileID: 1504046843}
   m_Father: {fileID: 1473726470}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &1090729737
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9387,7 +9395,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1096517544}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 9.14, z: 0}
+  m_LocalPosition: {x: 0, y: 9.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1302454576}
@@ -9407,7 +9415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
   laneId: -1
-  maxLane: 5
+  shipPerRow: 5
 --- !u!1 &1107387554
 GameObject:
   m_ObjectHideFlags: 0
@@ -10631,7 +10639,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1256979390}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: 9.14, z: 0}
+  m_LocalPosition: {x: -3, y: 9.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1302454576}
@@ -10651,7 +10659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
   laneId: -1
-  maxLane: 5
+  shipPerRow: 5
 --- !u!1 &1273404075
 GameObject:
   m_ObjectHideFlags: 0
@@ -10754,6 +10762,7 @@ MonoBehaviour:
   delay: 2
   limit: 0
   laneIndex: -1
+  spawnRot: {x: 0, y: 90, z: 0}
 --- !u!1 &1276585933
 GameObject:
   m_ObjectHideFlags: 0
@@ -10795,12 +10804,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1276585933}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfcec01a210896f4cb4ecde70017113c, type: 3}
+  m_Script: {fileID: 11500000, guid: a60db4fc8430be449b4414f708ba4f66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sphereCollider: {fileID: 1276585936}
-  hp: 7
-  hpMax: 7
+  hp: 20
+  hpMax: 20
   isDead: 0
   shootablObjectCtrl: {fileID: 1473726471}
 --- !u!135 &1276585936
@@ -10814,7 +10823,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1277290207
 GameObject:
@@ -11066,7 +11075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
   laneId: -1
-  maxLane: 5
+  shipPerRow: 5
 --- !u!1 &1311208917
 GameObject:
   m_ObjectHideFlags: 0
@@ -11554,7 +11563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
   laneId: -1
-  maxLane: 5
+  shipPerRow: 5
 --- !u!1 &1345298077
 GameObject:
   m_ObjectHideFlags: 0
@@ -11735,7 +11744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
   laneId: -1
-  maxLane: 5
+  shipPerRow: 5
 --- !u!1 &1358783376
 GameObject:
   m_ObjectHideFlags: 0
@@ -12787,7 +12796,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1473726470
 Transform:
   m_ObjectHideFlags: 0
@@ -12796,7 +12805,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1473726469}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1090729736}
@@ -12819,16 +12828,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1473726469}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 439e21364b7391b49b8aaf47791580dd, type: 3}
+  m_Script: {fileID: 11500000, guid: dc962d0f969e52542a1470765e2adf57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 1090729736}
   despawn: {fileID: 1130370385}
-  shootableObject: {fileID: 11400000, guid: 1c82ce67736237142933a2d51f077465, type: 2}
+  shootableObject: {fileID: 11400000, guid: 8861ec548c905f9409cb5c150e2fe74a, type: 2}
   objShooting: {fileID: 156666335}
   objMovement: {fileID: 920048130}
   objLookAtTarget: {fileID: 633057926}
-  spawner: {fileID: 0}
+  spawner: {fileID: 287968085}
   damageReceiver: {fileID: 1276585935}
   spawnPoints: {fileID: 1997648336}
 --- !u!1 &1475504534
@@ -12876,7 +12885,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
   laneId: -1
-  maxLane: 5
+  shipPerRow: 5
 --- !u!1 &1476436529
 GameObject:
   m_ObjectHideFlags: 0
@@ -13522,7 +13531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
   laneId: -1
-  maxLane: 5
+  shipPerRow: 5
 --- !u!1 &1540067888
 GameObject:
   m_ObjectHideFlags: 0
@@ -14487,7 +14496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
   laneId: -1
-  maxLane: 5
+  shipPerRow: 5
 --- !u!1 &1682169980
 GameObject:
   m_ObjectHideFlags: 0
@@ -15755,7 +15764,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
   laneId: -1
-  maxLane: 5
+  shipPerRow: 5
 --- !u!1 &1851417336
 GameObject:
   m_ObjectHideFlags: 0
@@ -17105,7 +17114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
   laneId: -1
-  maxLane: 5
+  shipPerRow: 5
 --- !u!1 &1997648334
 GameObject:
   m_ObjectHideFlags: 0
@@ -17724,7 +17733,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityObjectCtrl: {fileID: 0}
   laneId: -1
-  maxLane: 5
+  shipPerRow: 5
 --- !u!1 &2072302054
 GameObject:
   m_ObjectHideFlags: 0
@@ -17914,14 +17923,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 2145609743}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e518f51914bb3c43be7bf14f8b7b116, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a9dec9730554884fbddaf4663d24986, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   shipManagerCtrl: {fileID: 1900958932}
   killCount: 0
   dummy: 1
+  currentBossCtrl: {fileID: 0}
+  spawnPos: {fileID: 1096517546}
+  standPos: {fileID: 1344472841}
   enemyKillCount: 0
-  enemyKillLimit: 16
+  enemyKillLimit: 4
+  bossSpawned: 0
 --- !u!1 &1818211844804718
 GameObject:
   m_ObjectHideFlags: 0
@@ -19544,6 +19557,10 @@ PrefabInstance:
     - target: {fileID: 8296551412749270187, guid: b183358eb1172504b8bd75ecbcb5819a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296551412749270188, guid: b183358eb1172504b8bd75ecbcb5819a, type: 3}
+      propertyPath: speed
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b183358eb1172504b8bd75ecbcb5819a, type: 3}

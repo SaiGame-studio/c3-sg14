@@ -54,7 +54,7 @@ public abstract class Spawner : SaiMonoBehaviour
         Transform prefab = this.GetPrefabByName(prefabName);
         if (prefab == null)
         {
-            Debug.LogWarning("Prefab not found: " + prefabName);
+            Debug.LogError("Prefab not found: " + prefabName);
             return null;
         }
 
