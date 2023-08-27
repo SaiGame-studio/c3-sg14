@@ -4,7 +4,7 @@ public class ShipStandPos : SaiMonoBehaviour
 {
     public AbilityObjectCtrl abilityObjectCtrl;
     [SerializeField] protected int laneId = -1;
-    [SerializeField] protected int maxLane = 5;
+    [SerializeField] protected int shipPerRow = 5;
 
     public int LaneId => laneId;
 
@@ -31,8 +31,8 @@ public class ShipStandPos : SaiMonoBehaviour
     {
         string name = transform.name;
         string numberPart = name.Substring(name.IndexOf('_') + 1);
-        this.laneId = int.Parse(numberPart) % this.maxLane;
-        if (this.laneId == 0) laneId = this.maxLane;
+        this.laneId = int.Parse(numberPart) % this.shipPerRow;
+        if (this.laneId == 0) laneId = this.shipPerRow;
     }
 
     public virtual void SetAbilityObjectCtrl(AbilityObjectCtrl abilityObjectCtrl)

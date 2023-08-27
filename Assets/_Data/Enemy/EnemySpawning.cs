@@ -9,6 +9,7 @@ public class EnemySpawning : EnemyShipsAbstact
     [SerializeField] protected float delay = 2f;
     [SerializeField] protected int limit = 0;
     [SerializeField] protected int laneIndex = -1;
+    [SerializeField] protected Vector3 spawnRot = new Vector3(0,90,0);
 
     protected virtual void FixedUpdate()
     {
@@ -88,7 +89,6 @@ public class EnemySpawning : EnemyShipsAbstact
             spawnPos = shipSpawnPos;
             break;
         }
-
 
         return spawnPos;
     }
