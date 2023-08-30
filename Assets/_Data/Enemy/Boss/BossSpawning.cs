@@ -51,7 +51,7 @@ public class BossSpawning : EnemyShipsAbstact
         this.currentBossCtrl = shipObj.GetComponent<BossCtrl>();
         this.shipManagerCtrl.shipsManager.AddShip(this.currentBossCtrl);
 
-        ShipMoveFoward shipMoveFoward = this.currentBossCtrl.ObjMovement as ShipMoveFoward;
+        ShipMoveForward shipMoveFoward = this.currentBossCtrl.ObjMovement as ShipMoveForward;
         if (shipMoveFoward != null)
         {
             shipMoveFoward.SetMoveTarget(this.standPos.transform);
