@@ -36,7 +36,7 @@ public class EnemySpawning : EnemyShipsAbstact
         EnemyCtrl shipCtrl = shipObj.GetComponent<EnemyCtrl>();
         this.shipManagerCtrl.shipsManager.AddShip(shipCtrl);
 
-        ShipMoveFoward shipMoveFoward = shipCtrl.ObjMovement as ShipMoveFoward;
+        ShipMoveForward shipMoveFoward = shipCtrl.ObjMovement as ShipMoveForward;
         if (shipMoveFoward != null)
         {
             shipMoveFoward.SetMoveTarget(standPoint.transform);

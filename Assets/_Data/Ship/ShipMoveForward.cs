@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ShipMoveFoward : ObjMovement 
+public class ShipMoveForward : ObjMovement 
 {
     [Header("Move Ship Foward")]
     [SerializeField] protected Transform moveTarget;

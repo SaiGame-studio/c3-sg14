@@ -6,6 +6,7 @@ public class ObjMovement : SaiMonoBehaviour
 {
     [Header("Obj Movement")]
     [SerializeField] protected Vector3 targetPosition;
+    [SerializeField] protected Vector3 offsetPosition;
     [SerializeField] protected float speed = 0.01f;
     [SerializeField] protected float distance = 1f;
     [SerializeField] protected float minDistance = 1f;
@@ -22,10 +23,19 @@ public class ObjMovement : SaiMonoBehaviour
 
     protected virtual void Moving()
     {
-        this.distance = Vector3.Distance(transform.position, this.targetPosition);
+        Vector3 movePos = this.targetPosition;
+        movePos.x += this.offsetPosition.x;
+        movePos.y += this.offsetPosition.y;
+        movePos.z += this.offsetPosition.z;
+        this.distance = Vector3.Distance(transform.position, movePos);
         if (this.distance < this.minDistance) return;
 
-        Vector3 newPos = Vector3.Lerp(transform.parent.position, targetPosition, this.speed);
+        Vector3 newPos = Vector3.Lerp(transform.parent.position, movePos, this.speed);
         transform.parent.position = newPos;
+    }
+
+    public virtual void SetOffsetPosition(Vector3 newOffset)
+    {
+        this.offsetPosition = newOffset;
     }
 }
