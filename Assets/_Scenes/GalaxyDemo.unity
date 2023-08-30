@@ -497,8 +497,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2047164430}
   m_HandleRect: {fileID: 2047164429}
   m_Direction: 0
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.9999998
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4431,7 +4431,7 @@ MonoBehaviour:
   despawn: {fileID: 513088066}
   shootableObject: {fileID: 11400000, guid: 1c82ce67736237142933a2d51f077465, type: 2}
   objShooting: {fileID: 266025867}
-  objMovement: {fileID: 1964144917}
+  objMovement: {fileID: 1964144918}
   objLookAtTarget: {fileID: 82981319}
   spawner: {fileID: 1114561241}
   damageReceiver: {fileID: 1973741387}
@@ -4983,7 +4983,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -10924,7 +10924,7 @@ MonoBehaviour:
   despawn: {fileID: 1130370385}
   shootableObject: {fileID: 11400000, guid: 8861ec548c905f9409cb5c150e2fe74a, type: 2}
   objShooting: {fileID: 156666335}
-  objMovement: {fileID: 2140413960}
+  objMovement: {fileID: 2140413961}
   objLookAtTarget: {fileID: 633057926}
   spawner: {fileID: 287968085}
   damageReceiver: {fileID: 1276585935}
@@ -12155,7 +12155,7 @@ MonoBehaviour:
   despawn: {fileID: 2061267378}
   shootableObject: {fileID: 11400000, guid: 3c4a925031446284ca11bf1b514f68ca, type: 2}
   objShooting: {fileID: 1732588893}
-  objMovement: {fileID: 1890463075}
+  objMovement: {fileID: 1890463076}
   objLookAtTarget: {fileID: 1355551970}
   spawner: {fileID: 1171677035}
   damageReceiver: {fileID: 406705402}
@@ -13792,29 +13792,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885171986}
   m_CullTransparentMesh: 1
---- !u!1 &1890463074 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8296551412749270186, guid: b183358eb1172504b8bd75ecbcb5819a, type: 3}
+--- !u!114 &1890463076 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1049788030404292697, guid: b183358eb1172504b8bd75ecbcb5819a, type: 3}
   m_PrefabInstance: {fileID: 8296551414097187208}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1890463075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1890463074}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39c190cf38fdfda47b46d2221f5b3d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPosition: {x: 0, y: 0, z: 0}
-  offsetPosition: {x: 0, y: 0, z: 0}
-  speed: 0.01
-  distance: 1
-  minDistance: 1
-  moveTarget: {fileID: 0}
 --- !u!1 &1900958930
 GameObject:
   m_ObjectHideFlags: 0
@@ -14325,29 +14313,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1963235387}
   m_CullTransparentMesh: 1
---- !u!1 &1964144916 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8296551412749270186, guid: b183358eb1172504b8bd75ecbcb5819a, type: 3}
+--- !u!114 &1964144918 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1049788030404292697, guid: b183358eb1172504b8bd75ecbcb5819a, type: 3}
   m_PrefabInstance: {fileID: 762295114}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1964144917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1964144916}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39c190cf38fdfda47b46d2221f5b3d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPosition: {x: 0, y: 0, z: 0}
-  offsetPosition: {x: 0, y: 0, z: 0}
-  speed: 0.01
-  distance: 1
-  minDistance: 1
-  moveTarget: {fileID: 0}
 --- !u!1 &1973741385
 GameObject:
   m_ObjectHideFlags: 0
@@ -15268,12 +15244,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c20d8650b4dcb94dab9e3240e895067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPosition: {x: 0, y: 0, z: 0}
-  offsetPosition: {x: 0, y: 0, z: 0}
-  speed: 0.01
-  distance: 1
-  minDistance: 1
-  moveTarget: {fileID: 0}
+  shipMoveForward: {fileID: 2140413961}
+  fixOffset: {x: 0, y: 3, z: 0}
+--- !u!114 &2140413961 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1049788030404292697, guid: b183358eb1172504b8bd75ecbcb5819a, type: 3}
+  m_PrefabInstance: {fileID: 488685176}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140413959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39c190cf38fdfda47b46d2221f5b3d83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2145540519 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8354617280577285860, guid: a9737f1dc8fba0c4db8477eba739480a, type: 3}
