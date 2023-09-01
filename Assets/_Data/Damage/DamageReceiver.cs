@@ -74,5 +74,10 @@ public abstract class DamageReceiver : SaiMonoBehaviour
         this.OnDead();
     }
 
+    public virtual void SetHPMax(double hpMax)
+    {
+        this.hpMax = hpMax;
+    }
+
     protected abstract void OnDead();
 }

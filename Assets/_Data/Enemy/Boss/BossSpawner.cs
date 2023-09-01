@@ -22,7 +22,7 @@ public class BossSpawner : Spawner
     protected virtual void AddHPBar2Obj(Transform newEnemy)
     {
         ShootableObjectCtrl newEnemyCtrl = newEnemy.GetComponent<ShootableObjectCtrl>();
-        Transform newHpBar = HPBarSpawner.Instance.Spawn(HPBarSpawner.HPBarSmall, newEnemy.position, Quaternion.identity);
+        Transform newHpBar = HPBarSpawner.Instance.Spawn(HPBarSpawner.HPBar, newEnemy.position, Quaternion.identity);
         HPBar hpBar = newHpBar.GetComponent<HPBar>();
         hpBar.SetObjectCtrl(newEnemyCtrl);
         hpBar.SetFollowTarget(newEnemy);

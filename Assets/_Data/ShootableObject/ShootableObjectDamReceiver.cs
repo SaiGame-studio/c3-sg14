@@ -17,6 +17,7 @@ public class ShootableObjectDamReceiver : DamageReceiver
     {
         if (this.shootablObjectCtrl != null) return;
         this.shootablObjectCtrl = transform.parent.GetComponent<ShootableObjectCtrl>();
+        this.hpMax = this.shootablObjectCtrl.ShootableObject.hpMax;
         Debug.LogWarning(transform.name + ": LoadCtrl", gameObject);
     }
 
@@ -44,11 +45,5 @@ public class ShootableObjectDamReceiver : DamageReceiver
     protected virtual string GetOnDeadFXName()
     {
         return FXSpawner.smoke1;
-    }
-
-    public override void Reborn()
-    {
-        this.hpMax = this.shootablObjectCtrl.ShootableObject.hpMax;
-        base.Reborn();
     }
 }
